@@ -1,0 +1,12 @@
+# vim: ft=colortemplate
+
+Full name: vim-candid
+Short name: candid
+
+Include: _info.colortemplate
+Include: _neutral_colors.colortemplate
+
+Background: dark
+Color: bg0 #21252b ~
+
+Include: _dark.colortemplate
