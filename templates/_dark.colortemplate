@@ -81,8 +81,8 @@ SpellBad                         red    none    t=underline g=italic,undercurl s
 SpellCap                         blue   none    t=underline g=italic,undercurl s=blue
 SpellLocal                       aqua   none    t=underline g=italic,undercurl s=aqua
 SpellRare                        purple none    t=underline g=italic,undercurl s=purple
-StatusLine                       grey   fg1     reverse
-StatusLineNC                     bg1    fg4     reverse
+StatusLine                       bg1    orange     reverse
+StatusLineNC                     bg1    orange
 StatusLineTerm                -> StatusLine
 StatusLineTermNC              -> StatusLineNC
 TabLine                       -> TabLineFill
