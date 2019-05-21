@@ -1,6 +1,6 @@
 ![candid.vim](https://github.com/flrnprz/candid-vim/raw/master/candid-screen.png)
 # candid.vim
-A dark vim/neovim color scheme inspired in the awesome [VSCode theme Plastic](https://github.com/will-stone/plastic) theme.
+A dark vim/neovim color scheme inspired in the awesome [VSCode Plastic](https://github.com/will-stone/plastic) theme.
 
 ### Install
 
