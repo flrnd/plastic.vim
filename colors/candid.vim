@@ -2,9 +2,9 @@
 " Description:  A vim theme inspired in VSCode themes Plastic and Lucy
 " Author:       Florian Prz
 " Maintainer:   Florian Prz
-" Website:      https://github.com/flrnprz/candid-vim/
+" Website:      https://github.com/flrnprz/candid.vim/
 " License:      Vim License (see `:help license`)
-" Last Updated: Sat 11 May 2019 11:09:46 PM CEST
+" Last Updated: Tue 21 May 2019 10:20:21 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -104,6 +104,9 @@ hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi ToolbarLine ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE gui=NONE
 hi ToolbarButton ctermfg=188 ctermbg=234 guifg=#d7d7d7 guibg=#1a1d27 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi jsImport ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link jsExport jsImport
+hi! link jsFrom jsImport
 hi goDirective ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goConstants ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goDeclaration ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -157,7 +160,7 @@ finish
 " DiffDelete                       red    bg0     reverse
 " DiffText                         yellow bg0     reverse
 " Directory                        green  none
-" EndOfBuffer                      orange    none
+" EndOfBuffer                      orange none
 " Error                            red    bg0     bold,reverse
 " ErrorMsg                         bg0    red     bold
 " Folded                           grey   bg1     g=italic
@@ -214,6 +217,9 @@ finish
 " CursorIM                         none   none    reverse
 " ToolbarLine          none              bg3
 " ToolbarButton        fg0               bg3               bold
+" jsImport                         red    none
+" jsExport                      -> jsImport
+" jsFrom                        -> jsImport
 " goDirective                      aqua   none
 " goConstants                      fg     none
 " goDeclaration                    red    none
