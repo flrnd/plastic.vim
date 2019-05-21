@@ -65,11 +65,11 @@ ErrorMsg                         bg0    red     bold
 Folded                           grey   bg1     g=italic
 IncSearch                        orange bg0     reverse
 LineNr                           fg2    none
-MatchParen                       none   bg3     bold
+MatchParen                       none   blue    bold
 ModeMsg                          yellow none    bold
 MoreMsg                          yellow none    bold
 NonText                          orange none
-Pmenu                            fg1    bg4
+Pmenu                            orange bg1
 PmenuSbar                        none   bg3
 PmenuSel                         bg1    fg2     bold
 PmenuThumb                       none   bg4
@@ -89,7 +89,7 @@ TabLine                       -> TabLineFill
 TabLineFill                      bg4    bg1
 TabLineSel                       green  bg1
 Title                            green  none    bold
-Visual                           none   bg3
+Visual                           bg1    orange
 VisualNOS                     -> Visual
 WarningMsg                       red    none    bold
 WildMenu                         blue   bg2     bold
@@ -127,6 +127,17 @@ ToolbarLine          none              bg3
 ToolbarButton        fg0               bg3               bold
 
 # }}}
+# xml & html {{{
+xmlRegion                        none none
+xmlTag                           none none
+xmlTagName                       yellow none
+htmlTag                      ->  xmlTag
+htmlEndTag                   ->  htmlTag
+htmlTagName                  ->  xmlTagName
+htmlArg                          orange none
+xmlEndtag                        none none
+#}}}
+
 # Javascript {{{
 jsImport                         red    none
 jsExport                      -> jsImport

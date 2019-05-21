@@ -4,7 +4,7 @@
 " Maintainer:   Florian Prz
 " Website:      https://github.com/flrnprz/candid.vim/
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue 21 May 2019 10:30:12 PM CEST
+" Last Updated: Tue 21 May 2019 11:03:09 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -53,11 +53,11 @@ hi ErrorMsg ctermfg=235 ctermbg=203 guifg=#21252b guibg=#e06c75 guisp=NONE cterm
 hi Folded ctermfg=249 ctermbg=234 guifg=#abb2bf guibg=#181a1f guisp=NONE cterm=NONE gui=NONE,italic
 hi IncSearch ctermfg=180 ctermbg=235 guifg=#d19a66 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi LineNr ctermfg=241 ctermbg=NONE guifg=#5f6672 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi MatchParen ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi MatchParen ctermfg=NONE ctermbg=39 guifg=NONE guibg=#61afef guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi ModeMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi MoreMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Pmenu ctermfg=249 ctermbg=236 guifg=#a9b2c3 guibg=#2d303d guisp=NONE cterm=NONE gui=NONE
+hi Pmenu ctermfg=180 ctermbg=234 guifg=#d19a66 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSel ctermfg=234 ctermbg=241 guifg=#181a1f guibg=#5f6672 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi PmenuThumb ctermfg=NONE ctermbg=236 guifg=NONE guibg=#2d303d guisp=NONE cterm=NONE gui=NONE
@@ -77,7 +77,7 @@ hi! link TabLine TabLineFill
 hi TabLineFill ctermfg=236 ctermbg=234 guifg=#2d303d guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
 hi TabLineSel ctermfg=150 ctermbg=234 guifg=#98c379 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
 hi Title ctermfg=150 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi Visual ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE gui=NONE
+hi Visual ctermfg=234 ctermbg=180 guifg=#181a1f guibg=#d19a66 guisp=NONE cterm=NONE gui=NONE
 hi! link VisualNOS Visual
 hi WarningMsg ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi WildMenu ctermfg=39 ctermbg=235 guifg=#61afef guibg=#21252b guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -104,6 +104,14 @@ hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi ToolbarLine ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE gui=NONE
 hi ToolbarButton ctermfg=188 ctermbg=234 guifg=#d7d7d7 guibg=#1a1d27 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi xmlRegion ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi xmlTag ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi xmlTagName ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link htmlTag xmlTag
+hi! link htmlEndTag htmlTag
+hi! link htmlTagName xmlTagName
+hi htmlArg ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi xmlEndtag ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsImport ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link jsExport jsImport
 hi! link jsFrom jsImport
@@ -167,11 +175,11 @@ finish
 " Folded                           grey   bg1     g=italic
 " IncSearch                        orange bg0     reverse
 " LineNr                           fg2    none
-" MatchParen                       none   bg3     bold
+" MatchParen                       none   blue    bold
 " ModeMsg                          yellow none    bold
 " MoreMsg                          yellow none    bold
 " NonText                          orange none
-" Pmenu                            fg1    bg4
+" Pmenu                            orange bg1
 " PmenuSbar                        none   bg3
 " PmenuSel                         bg1    fg2     bold
 " PmenuThumb                       none   bg4
@@ -191,7 +199,7 @@ finish
 " TabLineFill                      bg4    bg1
 " TabLineSel                       green  bg1
 " Title                            green  none    bold
-" Visual                           none   bg3
+" Visual                           bg1    orange
 " VisualNOS                     -> Visual
 " WarningMsg                       red    none    bold
 " WildMenu                         blue   bg2     bold
@@ -218,6 +226,14 @@ finish
 " CursorIM                         none   none    reverse
 " ToolbarLine          none              bg3
 " ToolbarButton        fg0               bg3               bold
+" xmlRegion                        none none
+" xmlTag                           none none
+" xmlTagName                       yellow none
+" htmlTag                      ->  xmlTag
+" htmlEndTag                   ->  htmlTag
+" htmlTagName                  ->  xmlTagName
+" htmlArg                          orange none
+" xmlEndtag                        none none
 " jsImport                         red    none
 " jsExport                      -> jsImport
 " jsFrom                        -> jsImport
