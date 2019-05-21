@@ -1,6 +1,6 @@
 ![candid.vim](https://github.com/flrnprz/candid-vim/raw/master/candid-screen.png)
 # candid.vim
-A dark vim/neovim color scheme ~~shamely copied~~ inspired in [VSCode theme Plastic](https://github.com/will-stone/plastic) and [Onedark.vim](https://github.com/joshdick/onedark.vim)
+A dark vim/neovim color scheme inspired in the awesome [VSCode theme Plastic](https://github.com/will-stone/plastic) theme.
 
 ### Install
 
@@ -12,12 +12,10 @@ colorscheme candid
 ```
 
 #### NOTE
-The theme is still in barebones and it has a minimal syntax highlight support.
-Decent javascript syntax.
-Decent golang syntax.
+The theme has decent syntax highlight. Only tested with Javascript and golang.
 
 #### TODO
-* A lot of lang syntax.
+* Add A lot of more lang syntax support.
 * lightline theme support.
 * Better nerdtree support.
 * [ ... ]
