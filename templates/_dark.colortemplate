@@ -131,7 +131,7 @@ ToolbarButton        fg0               bg3               bold
 jsImport                         red    none
 jsExport                      -> jsImport
 jsFrom                        -> jsImport
-
+jsExportDefault               -> jsImport
 #}}}
 
 # Go {{{
