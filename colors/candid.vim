@@ -1,10 +1,10 @@
 " Name:         vim-candid
-" Description:  A vim theme inspired in VSCode themes Plastic and Lucy
+" Description:  A vim theme inspired in VSCode themes Plastic and Onedark.vim
 " Author:       Florian Prz
 " Maintainer:   Florian Prz
 " Website:      https://github.com/flrnprz/candid.vim/
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue 21 May 2019 10:20:21 PM CEST
+" Last Updated: Tue 21 May 2019 10:30:12 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -107,6 +107,7 @@ hi ToolbarButton ctermfg=188 ctermbg=234 guifg=#d7d7d7 guibg=#1a1d27 guisp=NONE 
 hi jsImport ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link jsExport jsImport
 hi! link jsFrom jsImport
+hi! link jsExportDefault jsImport
 hi goDirective ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goConstants ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goDeclaration ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -220,6 +221,7 @@ finish
 " jsImport                         red    none
 " jsExport                      -> jsImport
 " jsFrom                        -> jsImport
+" jsExportDefault               -> jsImport
 " goDirective                      aqua   none
 " goConstants                      fg     none
 " goDeclaration                    red    none
