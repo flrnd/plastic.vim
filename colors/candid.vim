@@ -4,7 +4,7 @@
 " Maintainer:   Florian Prz
 " Website:      https://github.com/flrnprz/candid.vim/
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue 21 May 2019 11:03:09 PM CEST
+" Last Updated: Tue 21 May 2019 11:26:40 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -22,7 +22,7 @@ endif
 let g:colors_name = 'candid'
 
 let g:terminal_ansi_colors = [
-      \ '#21252b', '#e06c75', '#98c379', '#d79921', '#e5c07b', '#b16286', '#60b6c2', '#d7d7d7',
+      \ '#21252b', '#e06c75', '#98c379', '#d79921', '#e5c07b', '#b16286', '#60b6c2', '#7c8696',
       \ '#2d303d', '#e06c75', '#98c379', '#e5c07b', '#61afef', '#af98e6', '#56b6c2', '#a9b2c3']
 if !has('gui_running') && get(g:, 'candid_transp_bg', 0)
   hi Normal ctermfg=249 ctermbg=NONE guifg=#a9b2c3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -56,6 +56,7 @@ hi LineNr ctermfg=241 ctermbg=NONE guifg=#5f6672 guibg=NONE guisp=NONE cterm=NON
 hi MatchParen ctermfg=NONE ctermbg=39 guifg=NONE guibg=#61afef guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi ModeMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi MoreMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi Noise ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi NonText ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Pmenu ctermfg=180 ctermbg=234 guifg=#d19a66 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE gui=NONE
@@ -112,10 +113,17 @@ hi! link htmlEndTag htmlTag
 hi! link htmlTagName xmlTagName
 hi htmlArg ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi xmlEndtag ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi jsNoise ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi jsParens ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi jsBrackets ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsImport ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link jsExport jsImport
 hi! link jsFrom jsImport
 hi! link jsExportDefault jsImport
+hi jsStorageClass ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi jsClassKeyword ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi jsExtendsKeyword ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi jsThis ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goDirective ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goConstants ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goDeclaration ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -139,7 +147,7 @@ finish
 " Color: fg0             #d7d7d7    ~
 " Color: fg1             #a9b2c3    ~
 " Color: fg2             #5f6672    ~
-" Color: fg3             #d7d7d7    ~
+" Color: fg3             #7c8696    ~
 " Color: fg4             #d7d7d7    ~
 " Color: grey            #abb2bf    ~
 " Color: red             #e06c75  203
@@ -178,6 +186,7 @@ finish
 " MatchParen                       none   blue    bold
 " ModeMsg                          yellow none    bold
 " MoreMsg                          yellow none    bold
+" Noise                            fg3    none
 " NonText                          orange none
 " Pmenu                            orange bg1
 " PmenuSbar                        none   bg3
@@ -234,10 +243,17 @@ finish
 " htmlTagName                  ->  xmlTagName
 " htmlArg                          orange none
 " xmlEndtag                        none none
-" jsImport                         red    none
+" jsNoise                          fg3 none
+" jsParens                         fg3 none
+" jsBrackets                       fg3 none
+" jsImport                         red none
 " jsExport                      -> jsImport
 " jsFrom                        -> jsImport
 " jsExportDefault               -> jsImport
+" jsStorageClass                   blue none
+" jsClassKeyword                   blue none
+" jsExtendsKeyword                 blue none
+" jsThis                           yellow none
 " goDirective                      aqua   none
 " goConstants                      fg     none
 " goDeclaration                    red    none

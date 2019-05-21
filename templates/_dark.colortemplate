@@ -8,7 +8,7 @@ Color: bg4             #2d303d    ~
 Color: fg0             #d7d7d7    ~
 Color: fg1             #a9b2c3    ~
 Color: fg2             #5f6672    ~
-Color: fg3             #d7d7d7    ~
+Color: fg3             #7c8696    ~
 Color: fg4             #d7d7d7    ~
 Color: grey            #abb2bf    ~
 Color: red             #e06c75  203
@@ -68,6 +68,7 @@ LineNr                           fg2    none
 MatchParen                       none   blue    bold
 ModeMsg                          yellow none    bold
 MoreMsg                          yellow none    bold
+Noise                            fg3    none
 NonText                          orange none
 Pmenu                            orange bg1
 PmenuSbar                        none   bg3
@@ -139,10 +140,17 @@ xmlEndtag                        none none
 #}}}
 
 # Javascript {{{
-jsImport                         red    none
+jsNoise                          fg3 none
+jsParens                         fg3 none
+jsBrackets                       fg3 none
+jsImport                         red none
 jsExport                      -> jsImport
 jsFrom                        -> jsImport
 jsExportDefault               -> jsImport
+jsStorageClass                   blue none
+jsClassKeyword                   blue none
+jsExtendsKeyword                 blue none
+jsThis                           yellow none
 #}}}
 
 # Go {{{
