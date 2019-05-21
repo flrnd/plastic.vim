@@ -13,3 +13,11 @@ colorscheme candid
 
 #### NOTE
 The theme is still in barebones and it has a minimal syntax highlight support.
+Decent javascript syntax.
+Decent golang syntax.
+
+#### TODO
+* A lot of lang syntax.
+* lightline theme support.
+* Better nerdtree support.
+* [ ... ]
