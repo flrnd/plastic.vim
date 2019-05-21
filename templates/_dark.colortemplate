@@ -59,7 +59,7 @@ DiffChange                       aqua   bg0     reverse
 DiffDelete                       red    bg0     reverse
 DiffText                         yellow bg0     reverse
 Directory                        green  none
-EndOfBuffer                      orange    none
+EndOfBuffer                      orange none
 Error                            red    bg0     bold,reverse
 ErrorMsg                         bg0    red     bold
 Folded                           grey   bg1     g=italic
@@ -127,6 +127,12 @@ ToolbarLine          none              bg3
 ToolbarButton        fg0               bg3               bold
 
 # }}}
+# Javascript {{{
+jsImport                         red    none
+jsExport                      -> jsImport
+jsFrom                        -> jsImport
+
+#}}}
 
 # Go {{{
 goDirective                      aqua   none
