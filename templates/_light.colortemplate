@@ -1,0 +1,162 @@
+# vim: ft=colortemplate
+
+# Color palette for light background
+Color: bg1             #ede5d3    ~
+Color: bg2             #d8d1c0    ~
+Color: bg3             #b2a899    ~
+Color: bg4             #938b7f    ~
+Color: fg0             #2b2e30    ~
+Color: fg1             #373a3d    ~
+Color: fg2             #424749    ~
+Color: fg3             #4e5356    ~
+Color: fg4             #595f63    ~
+Color: grey            #919191    ~
+Color: red             #e06c75  203
+Color: green           #98c379    ~
+Color: yellow          #e5c07b    ~
+Color: blue            #61afef    ~
+Color: purple          #af98e6    ~
+Color: aqua            #56b6c2    ~
+Color: orange          #d19a66    ~
+
+verbatim
+let g:terminal_ansi_colors = [
+\ '@guibg0', '@guineutralred', '@guineutralgreen', '@guineutralyellow', '@guineutralblue', '@guineutralpurple', '@guineutralaqua', '@guifg3',
+\ '@guibg4', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guipurple', '@guiaqua', '@guifg1']
+endverbatim
+
+# Default highlight groups {{{
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+endverbatim
+    # Transparent background
+    Normal       fg1    none
+    CursorLineNr yellow none
+    FoldColumn   fg1   none
+    SignColumn   fg1    none
+    VertSplit    bg3    none
+verbatim
+else
+endverbatim
+    # Opaque background
+    Normal       fg0    bg0
+    CursorLineNr yellow bg4
+    FoldColumn   fg1    bg1
+    SignColumn   fg0    bg2
+    VertSplit    fg1    bg2
+verbatim
+endif
+endverbatim
+
+# Group                          Fg     Bg      Attributes
+ColorColumn                      none   bg2
+Conceal                          blue   none
+Cursor                           none   none    reverse
+CursorColumn                  -> CursorLine
+CursorLine                       fg1    bg1
+DiffAdd                          green  bg0     reverse
+DiffChange                       aqua   bg0     reverse
+DiffDelete                       red    bg0     reverse
+DiffText                         yellow bg0     reverse
+Directory                        green  none
+EndOfBuffer                      orange none
+Error                            red    bg0     bold,reverse
+ErrorMsg                         bg0    red     bold
+Folded                           grey   bg1     g=italic
+IncSearch                        orange bg0     reverse
+LineNr                           fg2    none
+MatchParen                       none   blue    bold
+ModeMsg                          yellow none    bold
+MoreMsg                          yellow none    bold
+Noise                            fg4    none
+NonText                          orange none
+Pmenu                            orange bg1
+PmenuSbar                        none   bg3
+PmenuSel                         bg1    fg2     bold
+PmenuThumb                       none   bg4
+Question                         orange none    bold
+QuickFixLine                  -> Search
+Search                           yellow bg0     reverse
+SpecialKey                       yellow none
+SpellBad                         red    none    t=underline g=italic,undercurl s=red
+SpellCap                         blue   none    t=underline g=italic,undercurl s=blue
+SpellLocal                       aqua   none    t=underline g=italic,undercurl s=aqua
+SpellRare                        purple none    t=underline g=italic,undercurl s=purple
+StatusLine                       bg1    orange     reverse
+StatusLineNC                     bg1    orange
+StatusLineTerm                -> StatusLine
+StatusLineTermNC              -> StatusLineNC
+TabLine                       -> TabLineFill
+TabLineFill                      bg4    bg1
+TabLineSel                       green  bg1
+Title                            green  none    bold
+Visual                           bg1    orange
+VisualNOS                     -> Visual
+WarningMsg                       red    none    bold
+WildMenu                         blue   bg2     bold
+
+Comment                          grey   none    g=italic
+Constant                         aqua   none
+Debug                            red    none
+Delimiter                        red    none
+Error                            red    bg4     bold,reverse
+String                           green  none
+Ignore                           fg     none
+PreProc                          aqua    none
+
+Character                        aqua   none
+Number                           aqua   none
+Boolean                          aqua   none
+Float                            aqua   none
+
+Identifier                       fg     none
+Function                         orange none
+
+Statement                        red    none
+
+Type                             blue   none
+Special                          fg     none
+Todo                             aqua   none
+
+Underlined                       blue   none    underline
+# Language mapping cursor
+lCursor                       -> Cursor
+# See `:help CursorIM`
+CursorIM                         none   none    reverse
+# See `:help window-toolbar`
+ToolbarLine          none              bg3
+ToolbarButton        fg0               bg3               bold
+
+# }}}
+# xml & html {{{
+xmlRegion                        none none
+xmlTag                           none none
+xmlTagName                       yellow none
+htmlTag                      ->  xmlTag
+htmlEndTag                   ->  htmlTag
+htmlTagName                  ->  xmlTagName
+htmlArg                          orange none
+xmlEndtag                        none none
+#}}}
+
+# Javascript {{{
+jsNoise                          fg3 none
+jsParens                         fg3 none
+jsBrackets                       fg3 none
+jsImport                         red none
+jsExport                      -> jsImport
+jsFrom                        -> jsImport
+jsExportDefault               -> jsImport
+jsStorageClass                   blue none
+jsClassKeyword                   blue none
+jsExtendsKeyword                 blue none
+jsThis                           yellow none
+#}}}
+
+# Go {{{
+goDirective                      aqua   none
+goConstants                      fg     none
+goDeclaration                    red    none
+goDeclType                       orange none
+goBuiltins                       orange none
+# }}}

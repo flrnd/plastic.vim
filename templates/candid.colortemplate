@@ -8,5 +8,8 @@ Include: _neutral_colors.colortemplate
 
 Background: dark
 Color: bg0 #21252b ~
-
 Include: _dark.colortemplate
+
+Background: light
+Color: bg0 #fffdf2 ~
+Include: _light.colortemplate
