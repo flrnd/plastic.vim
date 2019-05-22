@@ -11,13 +11,13 @@ Color: fg2             #424749    ~
 Color: fg3             #4e5356    ~
 Color: fg4             #595f63    ~
 Color: grey            #919191    ~
-Color: red             #e06c75  203
-Color: green           #98c379    ~
-Color: yellow          #e5c07b    ~
-Color: blue            #61afef    ~
-Color: purple          #af98e6    ~
-Color: aqua            #56b6c2    ~
-Color: orange          #d19a66    ~
+Color: red             #b5000f  203
+Color: green           #489600    ~
+Color: yellow          #eabf15    ~
+Color: blue            #0060af    ~
+Color: purple          #6436d8    ~
+Color: aqua            #00aaba    ~
+Color: orange          #ff8c28    ~
 
 verbatim
 let g:terminal_ansi_colors = [
@@ -32,7 +32,7 @@ endverbatim
     # Transparent background
     Normal       fg1    none
     CursorLineNr yellow none
-    FoldColumn   fg1   none
+    FoldColumn   fg1    none
     SignColumn   fg1    none
     VertSplit    bg3    none
 verbatim
@@ -68,7 +68,7 @@ LineNr                           fg2    none
 MatchParen                       none   blue    bold
 ModeMsg                          yellow none    bold
 MoreMsg                          yellow none    bold
-Noise                            fg4    none
+Noise                            bg4    none
 NonText                          orange none
 Pmenu                            orange bg1
 PmenuSbar                        none   bg3
@@ -90,13 +90,13 @@ TabLine                       -> TabLineFill
 TabLineFill                      bg4    bg1
 TabLineSel                       green  bg1
 Title                            green  none    bold
-Visual                           bg1    orange
+Visual                           bg1    fg2
 VisualNOS                     -> Visual
 WarningMsg                       red    none    bold
 WildMenu                         blue   bg2     bold
 
-Comment                          grey   none    g=italic
-Constant                         aqua   none
+Comment                          aqua   none    g=italic
+Constant                         purple none
 Debug                            red    none
 Delimiter                        red    none
 Error                            red    bg4     bold,reverse
@@ -116,7 +116,7 @@ Statement                        red    none
 
 Type                             blue   none
 Special                          fg     none
-Todo                             aqua   none
+Todo                             purple   none
 
 Underlined                       blue   none    underline
 # Language mapping cursor
@@ -140,23 +140,23 @@ xmlEndtag                        none none
 #}}}
 
 # Javascript {{{
-jsNoise                          fg3 none
-jsParens                         fg3 none
-jsBrackets                       fg3 none
-jsImport                         red none
+jsNoise                          bg4 none
+jsParens                         bg4 none
+jsBrackets                       bg4 none
+jsImport                         purple none
 jsExport                      -> jsImport
 jsFrom                        -> jsImport
 jsExportDefault               -> jsImport
 jsStorageClass                   blue none
 jsClassKeyword                   blue none
 jsExtendsKeyword                 blue none
-jsThis                           yellow none
+jsThis                           purple none
 #}}}
 
 # Go {{{
-goDirective                      aqua   none
-goConstants                      fg     none
-goDeclaration                    red    none
+goDirective                      orange   none
+goConstants                      blue     none
+goDeclaration                    purple    none
 goDeclType                       orange none
 goBuiltins                       orange none
 # }}}
