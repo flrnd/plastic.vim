@@ -4,9 +4,16 @@ A light & dark vim/neovim color scheme inspired in the awesome [VSCode Plastic](
 
 ### Install
 
-Copy `colors/candid.vim` in your `[vim/neovim]/colors` directory.
+Copy `colors/candid.vim` in your `~/.vim/colors` or `~/.config/nvim/colors` directory.
 
+If you want to switch between light and dark theme depending on the time of day
 ```vim
+if strftime('%H') >= 10 && strftime('%H') < 22
+  set background=light
+else
+  set background=dark
+endif
+
 syntax on
 colorscheme candid
 ```
@@ -18,4 +25,6 @@ The theme has decent syntax highlight. Only tested with Javascript and golang.
 * Add A lot of more lang syntax support.
 * lightline theme support.
 * Better nerdtree support.
+* Improve color accessibility.
+* Improve html syntax.
 * [ ... ]
