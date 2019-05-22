@@ -4,7 +4,7 @@
 " Maintainer:   Florian Prz
 " Website:      https://github.com/flrnprz/candid.vim/
 " License:      Vim License (see `:help license`)
-" Last Updated: Wed May 22 13:23:30 2019
+" Last Updated: Wed May 22 13:55:31 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -157,22 +157,22 @@ hi DiffChange ctermfg=37 ctermbg=231 guifg=#00aaba guibg=#fffdf2 guisp=NONE cter
 hi DiffDelete ctermfg=203 ctermbg=231 guifg=#b5000f guibg=#fffdf2 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=178 ctermbg=231 guifg=#eabf15 guibg=#fffdf2 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Directory ctermfg=64 ctermbg=NONE guifg=#489600 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi EndOfBuffer ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi EndOfBuffer ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Error ctermfg=203 ctermbg=231 guifg=#b5000f guibg=#fffdf2 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi ErrorMsg ctermfg=231 ctermbg=203 guifg=#fffdf2 guibg=#b5000f guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Folded ctermfg=246 ctermbg=254 guifg=#919191 guibg=#ede5d3 guisp=NONE cterm=NONE gui=NONE,italic
-hi IncSearch ctermfg=208 ctermbg=231 guifg=#ff8c28 guibg=#fffdf2 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi IncSearch ctermfg=200 ctermbg=231 guifg=#ff28c5 guibg=#fffdf2 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi LineNr ctermfg=238 ctermbg=NONE guifg=#424749 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MatchParen ctermfg=NONE ctermbg=25 guifg=NONE guibg=#0060af guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi ModeMsg ctermfg=178 ctermbg=NONE guifg=#eabf15 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi MoreMsg ctermfg=178 ctermbg=NONE guifg=#eabf15 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Noise ctermfg=245 ctermbg=NONE guifg=#938b7f guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi NonText ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Pmenu ctermfg=208 ctermbg=254 guifg=#ff8c28 guibg=#ede5d3 guisp=NONE cterm=NONE gui=NONE
+hi NonText ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Pmenu ctermfg=236 ctermbg=25 guifg=#2b2e30 guibg=#0060af guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=NONE ctermbg=248 guifg=NONE guibg=#b2a899 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSel ctermfg=254 ctermbg=238 guifg=#ede5d3 guibg=#424749 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi PmenuThumb ctermfg=NONE ctermbg=245 guifg=NONE guibg=#938b7f guisp=NONE cterm=NONE gui=NONE
-hi Question ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi Question ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi! link QuickFixLine Search
 hi Search ctermfg=178 ctermbg=231 guifg=#eabf15 guibg=#fffdf2 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi SpecialKey ctermfg=178 ctermbg=NONE guifg=#eabf15 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -180,8 +180,8 @@ hi SpellBad ctermfg=203 ctermbg=NONE guifg=#b5000f guibg=NONE guisp=#b5000f cter
 hi SpellCap ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=#0060af cterm=NONE,underline gui=NONE,italic,undercurl
 hi SpellLocal ctermfg=37 ctermbg=NONE guifg=#00aaba guibg=NONE guisp=#00aaba cterm=NONE,underline gui=NONE,italic,undercurl
 hi SpellRare ctermfg=92 ctermbg=NONE guifg=#6436d8 guibg=NONE guisp=#6436d8 cterm=NONE,underline gui=NONE,italic,undercurl
-hi StatusLine ctermfg=254 ctermbg=208 guifg=#ede5d3 guibg=#ff8c28 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi StatusLineNC ctermfg=254 ctermbg=208 guifg=#ede5d3 guibg=#ff8c28 guisp=NONE cterm=NONE gui=NONE
+hi StatusLine ctermfg=254 ctermbg=200 guifg=#ede5d3 guibg=#ff28c5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi StatusLineNC ctermfg=254 ctermbg=200 guifg=#ede5d3 guibg=#ff28c5 guisp=NONE cterm=NONE gui=NONE
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
 hi! link TabLine TabLineFill
@@ -204,10 +204,10 @@ hi Character ctermfg=37 ctermbg=NONE guifg=#00aaba guibg=NONE guisp=NONE cterm=N
 hi Number ctermfg=37 ctermbg=NONE guifg=#00aaba guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Boolean ctermfg=37 ctermbg=NONE guifg=#00aaba guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Float ctermfg=37 ctermbg=NONE guifg=#00aaba guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Identifier ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Function ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Identifier ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Function ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Statement ctermfg=203 ctermbg=NONE guifg=#b5000f guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Type ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Type ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Special ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Todo ctermfg=92 ctermbg=NONE guifg=#6436d8 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Underlined ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
@@ -221,7 +221,7 @@ hi xmlTagName ctermfg=178 ctermbg=NONE guifg=#eabf15 guibg=NONE guisp=NONE cterm
 hi! link htmlTag xmlTag
 hi! link htmlEndTag htmlTag
 hi! link htmlTagName xmlTagName
-hi htmlArg ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi htmlArg ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi xmlEndtag ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsNoise ctermfg=245 ctermbg=NONE guifg=#938b7f guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsParens ctermfg=245 ctermbg=NONE guifg=#938b7f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -234,11 +234,11 @@ hi jsStorageClass ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE ct
 hi jsClassKeyword ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsExtendsKeyword ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsThis ctermfg=92 ctermbg=NONE guifg=#6436d8 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goDirective ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi goDirective ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goConstants ctermfg=25 ctermbg=NONE guifg=#0060af guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goDeclaration ctermfg=92 ctermbg=NONE guifg=#6436d8 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goDeclType ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goBuiltins ctermfg=208 ctermbg=NONE guifg=#ff8c28 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi goDeclType ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi goBuiltins ctermfg=200 ctermbg=NONE guifg=#ff28c5 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 finish
 
 " Color: neutralred        rgb(224, 108, 117)    ~
@@ -387,7 +387,7 @@ finish
 " Color: blue            #0060af    ~
 " Color: purple          #6436d8    ~
 " Color: aqua            #00aaba    ~
-" Color: orange          #ff8c28    ~
+" Color: orange          #ff28c5    ~
 "     Normal       fg1    none
 "     CursorLineNr yellow none
 "     FoldColumn   fg1    none
@@ -419,7 +419,7 @@ finish
 " MoreMsg                          yellow none    bold
 " Noise                            bg4    none
 " NonText                          orange none
-" Pmenu                            orange bg1
+" Pmenu                            fg0    blue
 " PmenuSbar                        none   bg3
 " PmenuSel                         bg1    fg2     bold
 " PmenuThumb                       none   bg4
@@ -455,10 +455,10 @@ finish
 " Number                           aqua   none
 " Boolean                          aqua   none
 " Float                            aqua   none
-" Identifier                       fg     none
-" Function                         orange none
+" Identifier                       blue     none
+" Function                         blue none
 " Statement                        red    none
-" Type                             blue   none
+" Type                             orange   none
 " Special                          fg     none
 " Todo                             purple   none
 " Underlined                       blue   none    underline

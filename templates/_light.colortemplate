@@ -17,7 +17,7 @@ Color: yellow          #eabf15    ~
 Color: blue            #0060af    ~
 Color: purple          #6436d8    ~
 Color: aqua            #00aaba    ~
-Color: orange          #ff8c28    ~
+Color: orange          #ff28c5    ~
 
 verbatim
 let g:terminal_ansi_colors = [
@@ -70,7 +70,7 @@ ModeMsg                          yellow none    bold
 MoreMsg                          yellow none    bold
 Noise                            bg4    none
 NonText                          orange none
-Pmenu                            orange bg1
+Pmenu                            fg0    blue
 PmenuSbar                        none   bg3
 PmenuSel                         bg1    fg2     bold
 PmenuThumb                       none   bg4
@@ -109,12 +109,12 @@ Number                           aqua   none
 Boolean                          aqua   none
 Float                            aqua   none
 
-Identifier                       fg     none
-Function                         orange none
+Identifier                       blue     none
+Function                         blue none
 
 Statement                        red    none
 
-Type                             blue   none
+Type                             orange   none
 Special                          fg     none
 Todo                             purple   none
 
