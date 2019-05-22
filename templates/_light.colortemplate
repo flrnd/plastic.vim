@@ -17,7 +17,7 @@ Color: yellow          #eabf15    ~
 Color: blue            #0060af    ~
 Color: purple          #6436d8    ~
 Color: aqua            #00aaba    ~
-Color: orange          #ff8c28    ~
+Color: orange          #d4b483    ~
 
 verbatim
 let g:terminal_ansi_colors = [
