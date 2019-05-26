@@ -21,6 +21,8 @@ colorscheme candid
 #### NOTE
 The theme has decent syntax highlight. Only tested with Javascript and golang.
 
+If you want to customize it only need to install [lifepillar/vim-colortemplate](https://github.com/lifepillar/vim-colortemplate) and edit the template files.
+
 #### TODO
 * Add A lot of more lang syntax support.
 * lightline theme support.
