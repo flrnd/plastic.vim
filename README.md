@@ -19,7 +19,9 @@ colorscheme candid
 ```
 
 #### NOTE
-The theme has decent syntax highlight. Only tested with Javascript and golang.
+The theme has decent syntax highlight. Only tested with Javascript and golang. Light theme is okeyish, but the color contrast needs a lot of work.
+
+Added Lightline support.
 
 If you want to customize it only need to install [lifepillar/vim-colortemplate](https://github.com/lifepillar/vim-colortemplate) and edit the template files.
 
