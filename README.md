@@ -25,7 +25,7 @@ If you want to customize it only need to install [lifepillar/vim-colortemplate](
 
 #### TODO
 * Add A lot of more lang syntax support.
-* lightline theme support.
+* ~~lightline theme support.~~
 * Better nerdtree support.
 * Improve color accessibility.
 * Improve html syntax.
