@@ -65,7 +65,7 @@ ErrorMsg                         bg0    red     bold
 Folded                           grey   bg1     g=italic
 IncSearch                        orange bg0     reverse
 LineNr                           fg2    none
-MatchParen                       none   blue    bold
+MatchParen                       blue   none    bold
 ModeMsg                          yellow none    bold
 MoreMsg                          yellow none    bold
 Noise                            fg3    none

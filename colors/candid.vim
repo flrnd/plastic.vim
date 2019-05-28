@@ -4,7 +4,7 @@
 " Maintainer:   Florian Prz
 " Website:      https://github.com/flrnprz/candid.vim/
 " License:      Vim License (see `:help license`)
-" Last Updated: Wed May 22 14:30:38 2019
+" Last Updated: Tue 28 May 2019 10:15:03 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -52,7 +52,7 @@ if &background ==# 'dark'
   hi Folded ctermfg=249 ctermbg=234 guifg=#abb2bf guibg=#181a1f guisp=NONE cterm=NONE gui=NONE,italic
   hi IncSearch ctermfg=180 ctermbg=235 guifg=#d19a66 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi LineNr ctermfg=241 ctermbg=NONE guifg=#5f6672 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi MatchParen ctermfg=NONE ctermbg=39 guifg=NONE guibg=#61afef guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi MatchParen ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi ModeMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi MoreMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi Noise ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -293,7 +293,7 @@ finish
 " Folded                           grey   bg1     g=italic
 " IncSearch                        orange bg0     reverse
 " LineNr                           fg2    none
-" MatchParen                       none   blue    bold
+" MatchParen                       blue   none    bold
 " ModeMsg                          yellow none    bold
 " MoreMsg                          yellow none    bold
 " Noise                            fg3    none
