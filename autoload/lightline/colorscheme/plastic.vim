@@ -1,5 +1,5 @@
 " =============================================================================
-" Filename: autoload/lightline/colorscheme/candid.vim
+" Filename: autoload/lightline/colorscheme/plastic.vim
 " Author: Flrn Prz
 " License: MIT License
 " =============================================================================
@@ -38,4 +38,4 @@ let s:p.tabline.right = copy(s:p.normal.right)
 let s:p.normal.error = [ [ s:red, s:base02 ] ]
 let s:p.normal.warning = [ [ s:yellow, s:base01 ] ]
 
-let g:lightline#colorscheme#candid#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#plastic#palette = lightline#colorscheme#flatten(s:p)

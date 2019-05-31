@@ -1,34 +1,35 @@
-![candid.vim](https://github.com/flrnprz/candid-vim/raw/master/candid-screen.png)
-# candid.vim
-A light & dark vim/neovim color scheme inspired in the awesome [VSCode Plastic](https://github.com/will-stone/plastic) theme.
+![plastic.vim](https://github.com/flrnprz/plastic.vim/raw/master/plastic-screen.png)
+
+# plastic.vim
+
+A dark vim/neovim color scheme inspired in the awesome [VSCode Plastic](https://github.com/will-stone/plastic) theme.
 
 ### Install
 
-Copy `colors/candid.vim` in your `~/.vim/colors` or `~/.config/nvim/colors` directory.
+Copy `colors/plastic.vim` in your `~/.vim/colors` or `~/.config/nvim/colors` directory.
 
-If you want to switch between light and dark theme depending on the time of day
 ```vim
-if strftime('%H') >= 10 && strftime('%H') < 22
-  set background=light
-else
-  set background=dark
-endif
+set background=dark
 
 syntax on
-colorscheme candid
+colorscheme plastic
 ```
 
 #### NOTE
-The theme has decent syntax highlight. Only tested with Javascript and golang. Light theme is okeyish, but the color contrast needs a lot of work.
+
+The theme has decent syntax highlight.
+Removed the Light theme in order to create a separate project. Also renamed it to `Plastic.vim` in
+honor to the original VS Code theme.
 
 Added Lightline support.
 
 If you want to customize it only need to install [lifepillar/vim-colortemplate](https://github.com/lifepillar/vim-colortemplate) and edit the template files.
 
 #### TODO
-* Add A lot of more lang syntax support.
-* ~~lightline theme support.~~
-* Better nerdtree support.
-* Improve color accessibility.
-* Improve html syntax.
-* [ ... ]
+
+- Add A lot of more lang syntax support.
+- ~~lightline theme support.~~
+- Better nerdtree support.
+- Improve color accessibility.
+- ~~Improve html syntax.~~
+- [ ... ]

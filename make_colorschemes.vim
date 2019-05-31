@@ -9,7 +9,7 @@ let s:errors = 0
 
 execute 'lcd' s:templates
 
-for s:template in glob(s:templates . '/candid*.colortemplate', 1, 1)
+for s:template in glob(s:templates . '/plastic*.colortemplate', 1, 1)
   let s:template_name = fnamemodify(s:template, ':t:r')
   execute "edit" s:template
   execute "Colortemplate!" fnameescape(s:curdir)
