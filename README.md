@@ -1,24 +1,28 @@
-![plastic.vim](https://github.com/flrnprz/plastic.vim/raw/master/plastic-vim-screen.png)
+![plastic.vim](https://github.com/flrnprz/plastic.vim/blob/master/pastic-vim-screen.png)
 
 # plastic.vim
 
-A dark vim/neovim color scheme inspired in the awesome [VSCode Plastic](https://github.com/will-stone/plastic) theme.
+[VSCode Plastic](https://github.com/will-stone/plastic) theme port for vim/neovim.
 
-### Install
+## Install
 
-Copy `colors/plastic.vim` in your `~/.vim/colors` or `~/.config/nvim/colors` directory.
+1. Using your plugin manager of choice and placing `flrnprz/plastic.vim` in your .vimrc file.
+or
+2. clone this directory into your vim/plugged directory
 
 ```vim
 set background=dark
-
 syntax on
 colorscheme plastic
+
+" Lightline
+let g:lightline = { 'colorscheme': 'plastic' }
 ```
 
 #### NOTE
 
 The theme has decent syntax highlight.
-Removed the Light theme in order to create a separate project. Also renamed it to `Plastic.vim` in
+Removed the Light theme in order to create a separate project. Also I renamed it back to `plastic.vim` in
 honor to the original VS Code theme.
 
 Added Lightline support.
@@ -30,6 +34,6 @@ If you want to customize it only need to install [lifepillar/vim-colortemplate](
 - Add A lot of more lang syntax support.
 - ~~lightline theme support.~~
 - Better nerdtree support.
-- Improve color accessibility.
+- ~~Improve color accessibility.~~
 - ~~Improve html syntax.~~
 - [ ... ]
