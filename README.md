@@ -1,4 +1,4 @@
-![plastic.vim](https://github.com/flrnprz/plastic.vim/raw/master/plastic-screen.png)
+![plastic.vim](https://github.com/flrnprz/plastic.vim/raw/master/plastic-vim-screen.png)
 
 # plastic.vim
 
