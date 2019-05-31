@@ -1,7 +1,7 @@
 # vim: ft=colortemplate
 
-Full name: vim-candid
-Short name: candid
+Full name: plastic.vim
+Short name: plastic
 
 Include: _info.colortemplate
 Include: _neutral_colors.colortemplate
@@ -9,7 +9,3 @@ Include: _neutral_colors.colortemplate
 Background: dark
 Color: bg0 #21252b ~
 Include: _dark.colortemplate
-
-Background: light
-Color: bg0 #fffdf2 ~
-Include: _light.colortemplate
