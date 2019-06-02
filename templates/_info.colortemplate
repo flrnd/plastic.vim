@@ -2,8 +2,8 @@
 
 Author:          Florian Prz
 Maintainer:      Florian Prz
-Website:         https://github.com/flrnprz/candid.vim/
-Description:     A vim theme inspired in VSCode themes Plastic and Onedark.vim
+Website:         https://github.com/flrnprz/plastic.vim/
+Description:     VS Code Plastic theme vim / neovim port
 Terminal Colors: 256
-Option Prefix:   candid
+Option Prefix:   plastic
 
