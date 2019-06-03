@@ -1,10 +1,9 @@
-" vim:fdm=marker
 " Name:         plastic.vim
 " Description:  VSCode Plastic theme vim/neovim port
 " Author:       Florian Prz
 " Repository:   https://github.com/flrnprz/plastic.vim/
 " License:      The MIT License (MIT)
-" Last Updated: Mon 03 Jun 2019 17:31:30 PM CEST
+" Last Updated: Mon 03 Jun 2019
 
 " Init {{{
 scriptencoding utf-8
@@ -160,17 +159,20 @@ call <sid>hi('Todo', s:aqua, s:none, 'italic', {})
 " Language specific syntax
 "--------------------------
 
-" xml & html {{{
-call <sid>hi('xmlRegion', s:none, s:none, 'none', {})
-hi link xmlTag xmlRegion
-call <sid>hi('xmlTagName', s:yellow, s:none, 'none', {})
-call <sid>hi('xmlEndTag', s:none, s:none, 'none', {})
-hi link htmlTag xmlTag
+" HTML {{{
+call <sid>hi('htmlTag', s:punctuation, s:none, 'none', {})
 hi link htmlEndTag htmlTag
-hi link htmlTagName xmlTagName
+call <sid>hi('htmlTagName', s:blue, s:none, 'none', {})
 call <sid>hi('htmlArg', s:whisky, s:none, 'none', {})
 call <sid>hi('htmlTitle', s:white, s:none, 'none', {})
 "}}}
+
+" XML {{{
+call <sid>hi('xmlRegion', s:white, s:none, 'none', {})
+hi link xmlTag xmlRegion
+call <sid>hi('xmlTagName', s:yellow, s:none, 'none', {})
+call <sid>hi('xmlEndTag', s:punctuation, s:none, 'none', {})
+" }}}
 
 " Css {{{
 call <sid>hi('cssAttrComma', s:punctuation, s:none, 'none', {})
@@ -202,6 +204,14 @@ call <sid>hi('jsStorageClass', s:blue, s:none, 'none', {})
 call <sid>hi('jsClassKeyword', s:blue, s:none, 'none', {})
 call <sid>hi('jsExtendsKeyword', s:blue, s:none, 'none', {})
 call <sid>hi('jsThis', s:yellow, s:none, 'none', {})
+"}}}
+
+" JSX {{{
+" https://github.com/MaxMEllon/vim-jsx-pretty
+call <sid>hi('jsxTagName', s:white, s:none, 'none', {})
+call <sid>hi('jsxPunct', s:punctuation, s:none, 'none', {})
+call <sid>hi('jsClosePunct', s:punctuation, s:none, 'none', {})
+hi link jsxCloseString jsClosePunct
 "}}}
 
 " Golang {{{
@@ -239,4 +249,4 @@ call <sid>hi('markdownLinkText', s:blue, s:none, 'none', {})
 call <sid>hi('markdownLinkDelimiter', s:white, s:none, 'none', {})
 call <sid>hi('markdownUrl', s:purple, s:none, 'none', {})
 
-" }}}
+"}}}
