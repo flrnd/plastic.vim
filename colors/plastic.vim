@@ -1,12 +1,13 @@
 " Name:         plastic.vim
 " Description:  VSCode Plastic theme vim/neovim port
 " Author:       Florian Prz
-" Maintainer:   https://github.com/flrnprz/plastic.vim/
+" Repository:   https://github.com/flrnprz/plastic.vim/
 " License:      The MIT License (MIT)
-" Last Updated: Mon 03 Jun 2019 02:56:30 PM CEST
+" Last Updated: Mon 03 Jun 2019 17:31:30 PM CEST
+
 " colors {{{
 let colors = {
-      \ 'red': { 'gui': '#E06C75', 'cterm': 204, 'cterm16': 1 },
+      \ "red": { "gui": "#E06C75", "cterm": "204", "cterm16": "1" },
       \ "dark_red": { "gui": "#BE5046", "cterm": "196", "cterm16": "9" },
       \ "green": { "gui": "#98C379", "cterm": "114", "cterm16": "2" },
       \ "yellow": { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" },
