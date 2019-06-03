@@ -7,7 +7,7 @@
 ## Install
 
 1. Using your plugin manager of choice and placing `flrnprz/plastic.vim` in your .vimrc file.
-or
+   or
 2. clone this directory into your vim/plugged directory
 
 ```vim
@@ -27,8 +27,9 @@ honor to the original VS Code theme.
 
 Added Lightline support.
 
-~~if you want to customize it only need to install [lifepillar/vim-colortemplate](https://github.com/lifepillar/vim-colortemplate) and edit the template files.
+~~if you want to customize it only need to install [lifepillar/vim-colortemplate](https://github.com/lifepillar/vim-colortemplate) and edit the template files.~~
 The colorscheme no longers support colortemplate.
+
 #### TODO
 
 - Add A lot of more lang syntax support.
