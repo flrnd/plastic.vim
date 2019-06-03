@@ -171,6 +171,27 @@ call <sid>hi('htmlArg', s:whisky, s:none, 'none', {})
 call <sid>hi('htmlTitle', s:white, s:none, 'none', {})
 "}}}
 
+"" css {{{
+call <sid>hi('cssAttrComma', s:punctuation, s:none, 'none', {})
+call <sid>hi('cssAttributeSelector', s:green, s:none, 'none', {})
+call <sid>hi('cssBraces', s:punctuation, s:none, 'none', {})
+call <sid>hi('cssClassName', s:aqua, s:none, 'none', {})
+call <sid>hi('cssDefinition', s:purple, s:none, 'none', {})
+call <sid>hi('cssFontAttr', s:whisky, s:none, 'none', {})
+call <sid>hi('cssFontDescriptor', s:purple, s:none, 'none', {})
+call <sid>hi('cssFunctionName', s:blue, s:none, 'none', {})
+call <sid>hi('cssIdentifier', s:blue, s:none, 'none', {})
+call <sid>hi('cssImportant', s:purple, s:none, 'none', {})
+call <sid>hi('cssInclude', s:white, s:none, 'none', {})
+call <sid>hi('cssIncludeKeyword', s:red, s:none, 'none', {})
+call <sid>hi('cssMediaType', s:aqua, s:none, 'none', {})
+call <sid>hi('cssProp', s:white, s:none, 'none', {})
+call <sid>hi('cssPseudoClassId', s:whisky, s:none, 'none', {})
+call <sid>hi('cssTagName', s:whisky, s:none, 'none', {})
+call <sid>hi('cssSelectorOp', s:purple, s:none, 'none', {})
+call <sid>hi('cssSelectorOp2', s:purple, s:none, 'none', {})
+"}}}
+
 "" javascript {{{
 call <sid>hi('jsImport', s:red, s:none, 'none', {})
 hi link jsExport jsImport
