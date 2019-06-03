@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-06-3
+### Fixed
+- Wrong info in heading
+
 ## [0.2.0] - 2019-06-03
 ### Changed
 - The theme no longer uses colortemplate plugin.

@@ -2,9 +2,9 @@
 " Description:  A vim theme inspired in VSCode themes Plastic and Onedark.vim
 " Author:       Florian Prz
 " Maintainer:   Florian Prz
-" Website:      https://github.com/flrnprz/candid.vim/
-" License:      Vim License (see `:help license`)
-" Last Updated: Mon 03 Jun 2019 02:56:30 PM CEST
+" Repository:   https://github.com/flrnprz/plastic.vim/
+" License:      MIT
+" Last Updated: Mon 03 Jun 2019 17:26:30 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
