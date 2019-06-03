@@ -53,13 +53,16 @@ let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
 
 " }}}
 
-"" Syntax Definitions (:h w18) {{{
+"--------------------
+" Syntax Definitions
+"--------------------
 " <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
 call <sid>hi('Normal', s:white, s:background, 'none', {})
-call <sid>hi('Comment', s:grey, s:none, 'italic', {})
 
-"" UI
+"" UI {{{
 call <sid>hi('Cursor', s:none, s:none, 'reverse', {})
+hi link lCursor Cursor
+hi link CursorIM Cursor
 call <sid>hi('CursorLine', s:white, s:background, 'none', {})
 call <sid>hi('EndOfBuffer', s:whisky, s:none, 'none', {})
 call <sid>hi('Conceal', s:blue, s:none, 'none', {})
@@ -76,7 +79,6 @@ call <sid>hi('DiffChange', s:black, s:purple, 'none', {})
 call <sid>hi('DiffDelete', s:black, s:red, 'none', {})
 call <sid>hi('DiffText', s:black, s:aqua, 'none', {})
 
-call <sid>hi('Error', s:red, s:background, 'none', {})
 call <sid>hi('ErrorMsg', s:red, s:background, 'bold', {})
 call <sid>hi('ModeMsg', s:yellow, s:none, 'bold', {})
 call <sid>hi('MoreMsg', s:aqua, s:none, 'bold', {})
@@ -116,3 +118,56 @@ hi link VisualNOS Visual
 call <sid>hi('TabLine', s:white, s:black, 'none', {})
 call <sid>hi('WildMenu', s:black, s:white, 'bold', {})
 "}}}
+
+"----------------------------------------------------
+" Syntax groups and naming convenions
+" http://vimdoc.sourceforge.net/htmldoc/syntax.html
+"----------------------------------------------------
+" {{{
+call <sid>hi('Comment', s:grey, s:none, 'italic', {})
+
+call <sid>hi('Constant', s:aqua, s:none, 'none', {})
+call <sid>hi('String', s:green, s:none, 'none', {})
+hi link Character Constant
+hi link Number Constant
+hi link Boolean Constant
+hi link Float Number
+
+call <sid>hi('Identifier', s:white, s:none, 'none', {})
+call <sid>hi('Function', s:whisky, s:none, 'none', {})
+
+call <sid>hi('Statement', s:red, s:none, 'none', {})
+hi link Conditional Statement
+
+call <sid>hi('PreProc', s:aqua, s:none, 'none', {})
+
+call <sid>hi('Type', s:blue, s:none, 'none', {})
+
+call <sid>hi('Special', s:punctuation, s:none, 'none', {})
+
+call <sid>hi('Underlined', s:blue, s:none, 'underline', {})
+
+call <sid>hi('Ignore', s:none, s:none, 'none', {})
+
+call <sid>hi('Error', s:red, s:black, 'undercurl', {})
+
+call <sid>hi('Todo', s:aqua, s:none, 'italic', {})
+
+"}}}
+
+"--------------------------
+" Language specific syntax
+"--------------------------
+
+"" xml & html {{{
+call <sid>hi('xmlRegion', s:none, s:none, 'none', {})
+hi link xmlTag xmlRegion
+call <sid>hi('xmlTagName', s:yellow, s:none, 'none', {})
+call <sid>hi('xmlEndTag', s:none, s:none, 'none', {})
+hi link htmlTag xmlTag
+hi link htmlEndTag htmlTag
+hi link htmlTagName xmlTagName
+call <sid>hi('htmlArg', s:whisky, s:none, 'none', {})
+call <sid>hi('htmlTitle', s:white, s:none, 'none', {})
+"}}}
+
