@@ -1,10 +1,33 @@
 " Name:         plastic.vim
-" Description:  A vim theme inspired in VSCode themes Plastic and Onedark.vim
+" Description:  VSCode Plastic theme vim/neovim port
 " Author:       Florian Prz
-" Maintainer:   Florian Prz
-" Repository:   https://github.com/flrnprz/plastic.vim/
-" License:      MIT
-" Last Updated: Mon 03 Jun 2019 17:26:30 PM CEST
+" Maintainer:   https://github.com/flrnprz/plastic.vim/
+" License:      The MIT License (MIT)
+" Last Updated: Mon 03 Jun 2019 02:56:30 PM CEST
+" colors {{{
+let colors = {
+      \ 'red': { 'gui': '#E06C75', 'cterm': 204, 'cterm16': 1 },
+      \ "dark_red": { "gui": "#BE5046", "cterm": "196", "cterm16": "9" },
+      \ "green": { "gui": "#98C379", "cterm": "114", "cterm16": "2" },
+      \ "yellow": { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" },
+      \ "dark_yellow": { "gui": "#D19A66", "cterm": "173", "cterm16": "11" },
+      \ "blue": { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" },
+      \ "purple": { "gui": "#C678DD", "cterm": "170", "cterm16": "5" },
+      \ "cyan": { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" },
+      \ "white": { "gui": "#ABB2BF", "cterm": "145", "cterm16": "7" },
+      \ "black": { "gui": "#282C34", "cterm": "235", "cterm16": "0" },
+      \ "visual_black": { "gui": "NONE", "cterm": "NONE", "cterm16": "0" },
+      \ "comment_grey": { "gui": "#5C6370", "cterm": "59", "cterm16": "15" },
+      \ "gutter_fg_grey": { "gui": "#4B5263", "cterm": "238", "cterm16": "15" },
+      \ "cursor_grey": { "gui": "#2C323C", "cterm": "236", "cterm16": "8" },
+      \ "visual_grey": { "gui": "#3E4452", "cterm": "237", "cterm16": "15" },
+      \ "menu_grey": { "gui": "#3E4452", "cterm": "237", "cterm16": "8" },
+      \ "special_grey": { "gui": "#3B4048", "cterm": "238", "cterm16": "15" },
+      \ "vertsplit": { "gui": "#181A1F", "cterm": "59", "cterm16": "15" },
+      \}
+
+let red = colors.red
+" }}}
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -26,7 +49,7 @@ let g:terminal_ansi_colors = [
       \ '#2d303d', '#e06c75', '#98c379', '#e5c07b', '#61afef', '#af98e6', '#56b6c2', '#a9b2c3']
 if !has('gui_running') && get(g:, 'candid_transp_bg', 0)
   hi Normal ctermfg=249 ctermbg=NONE guifg=#a9b2c3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi CursorLineNr ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi CursorLineNr ctermfg=180 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi FoldColumn ctermfg=249 ctermbg=NONE guifg=#a9b2c3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi SignColumn ctermfg=249 ctermbg=NONE guifg=#a9b2c3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi VertSplit ctermfg=234 ctermbg=NONE guifg=#1a1d27 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -44,12 +67,12 @@ hi! link CursorColumn CursorLine
 hi CursorLine ctermfg=249 ctermbg=234 guifg=#a9b2c3 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
 hi DiffAdd ctermfg=150 ctermbg=235 guifg=#98c379 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=73 ctermbg=235 guifg=#56b6c2 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffDelete ctermfg=203 ctermbg=235 guifg=#e06c75 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffDelete ctermfg=203 ctermbg=235 guifg=red.gui guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=179 ctermbg=235 guifg=#e5c07b guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Directory ctermfg=150 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi EndOfBuffer ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Error ctermfg=203 ctermbg=235 guifg=#e06c75 guibg=#21252b guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-hi ErrorMsg ctermfg=235 ctermbg=203 guifg=#21252b guibg=#e06c75 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi Error ctermfg=203 ctermbg=235 guifg=red.gui guibg=#21252b guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
+hi ErrorMsg ctermfg=235 ctermbg=203 guifg=#21252b guibg=red.gui guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Folded ctermfg=249 ctermbg=234 guifg=#abb2bf guibg=#181a1f guisp=NONE cterm=NONE gui=NONE,italic
 hi IncSearch ctermfg=180 ctermbg=235 guifg=#d19a66 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi LineNr ctermfg=241 ctermbg=NONE guifg=#5f6672 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -66,7 +89,7 @@ hi Question ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=N
 hi! link QuickFixLine Search
 hi Search ctermfg=179 ctermbg=235 guifg=#e5c07b guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi SpecialKey ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi SpellBad ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=#e06c75 cterm=NONE,underline gui=NONE,italic,undercurl
+hi SpellBad ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=red.gui cterm=NONE,underline gui=NONE,italic,undercurl
 hi SpellCap ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=#61afef cterm=NONE,underline gui=NONE,italic,undercurl
 hi SpellLocal ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=#56b6c2 cterm=NONE,underline gui=NONE,italic,undercurl
 hi SpellRare ctermfg=140 ctermbg=NONE guifg=#af98e6 guibg=NONE guisp=#af98e6 cterm=NONE,underline gui=NONE,italic,undercurl
@@ -80,14 +103,14 @@ hi TabLineSel ctermfg=150 ctermbg=234 guifg=#98c379 guibg=#181a1f guisp=NONE cte
 hi Title ctermfg=150 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Visual ctermfg=234 ctermbg=180 guifg=#181a1f guibg=#d19a66 guisp=NONE cterm=NONE gui=NONE
 hi! link VisualNOS Visual
-hi WarningMsg ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi WarningMsg ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi WildMenu ctermfg=39 ctermbg=235 guifg=#61afef guibg=#21252b guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Comment ctermfg=249 ctermbg=NONE guifg=#abb2bf guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
 hi Constant ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Debug ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Delimiter ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Error ctermfg=203 ctermbg=236 guifg=#e06c75 guibg=#2d303d guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-hi String ctermfg=150 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Debug ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Delimiter ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Error ctermfg=203 ctermbg=236 guifg=red.gui guibg=#2d303d guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
+hi String ctermfg=114 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Ignore ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi PreProc ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Character ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -96,7 +119,7 @@ hi Boolean ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NON
 hi Float ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Identifier ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Function ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Statement ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Statement ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Type ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Special ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Todo ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -116,7 +139,7 @@ hi xmlEndtag ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NO
 hi jsNoise ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsParens ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi jsBrackets ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsImport ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi jsImport ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link jsExport jsImport
 hi! link jsFrom jsImport
 hi! link jsExportDefault jsImport
