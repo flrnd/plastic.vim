@@ -60,7 +60,7 @@ let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
 " <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
 call <sid>hi('Normal', s:white, s:background, 'none', {})
 
-"" UI {{{
+" UI {{{
 call <sid>hi('Cursor', s:none, s:none, 'reverse', {})
 hi link lCursor Cursor
 hi link CursorIM Cursor
@@ -72,7 +72,7 @@ call <sid>hi('ColorColumn', s:none, s:background, 'none', {})
 call <sid>hi('FoldColumn', s:punctuation, s:background, 'none', {})
 call <sid>hi('SignColumn', s:none, s:background, 'none', {})
 call <sid>hi('VertSplit', s:grey, s:black, 'none', {})
-call <sid>hi('LineNr', s:yellow, s:background, 'none', {})
+call <sid>hi('LineNr', s:punctuation, s:background, 'none', {})
 call <sid>hi('CursorLineNr', s:punctuation, s:background, 'none', {})
 
 call <sid>hi('DiffAdd', s:black, s:green, 'none', {})
@@ -134,7 +134,7 @@ hi link Number Constant
 hi link Boolean Constant
 hi link Float Number
 
-call <sid>hi('Identifier', s:punctuation, s:none, 'none', {})
+call <sid>hi('Identifier', s:white, s:none, 'none', {})
 call <sid>hi('Function', s:whisky, s:none, 'none', {})
 
 call <sid>hi('Statement', s:red, s:none, 'none', {})
@@ -160,7 +160,7 @@ call <sid>hi('Todo', s:aqua, s:none, 'italic', {})
 " Language specific syntax
 "--------------------------
 
-"" xml & html {{{
+" xml & html {{{
 call <sid>hi('xmlRegion', s:none, s:none, 'none', {})
 hi link xmlTag xmlRegion
 call <sid>hi('xmlTagName', s:yellow, s:none, 'none', {})
@@ -172,7 +172,7 @@ call <sid>hi('htmlArg', s:whisky, s:none, 'none', {})
 call <sid>hi('htmlTitle', s:white, s:none, 'none', {})
 "}}}
 
-"" css {{{
+" Css {{{
 call <sid>hi('cssAttrComma', s:punctuation, s:none, 'none', {})
 call <sid>hi('cssAttributeSelector', s:green, s:none, 'none', {})
 call <sid>hi('cssBraces', s:punctuation, s:none, 'none', {})
@@ -193,7 +193,7 @@ call <sid>hi('cssSelectorOp', s:purple, s:none, 'none', {})
 call <sid>hi('cssSelectorOp2', s:purple, s:none, 'none', {})
 "}}}
 
-"" javascript {{{
+" Javascript {{{
 call <sid>hi('jsImport', s:red, s:none, 'none', {})
 hi link jsExport jsImport
 hi link jsFrom jsImport
@@ -204,7 +204,7 @@ call <sid>hi('jsExtendsKeyword', s:blue, s:none, 'none', {})
 call <sid>hi('jsThis', s:yellow, s:none, 'none', {})
 "}}}
 
-"" golang {{{
+" Golang {{{
 call <sid>hi('goDirective', s:aqua, s:none, 'none', {})
 call <sid>hi('goConstants', s:white, s:none, 'none', {})
 call <sid>hi('goDeclaration', s:red, s:none, 'none', {})
