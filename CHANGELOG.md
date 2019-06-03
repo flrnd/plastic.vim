@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2019-06-3
+### Changed
+- The colorscheme has now a system to modify colors without relying con external plugins.
+- Big refactor with a more clear code.
+
+### Added
+- Improved CSS support. Before this change, some elements inside the stylesheet were very confusing.
+
+
 ## [0.2.1] - 2019-06-3
 ### Fixed
 - Wrong info in heading
