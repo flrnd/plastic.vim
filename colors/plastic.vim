@@ -5,160 +5,114 @@
 " License:      The MIT License (MIT)
 " Last Updated: Mon 03 Jun 2019 17:31:30 PM CEST
 
-" colors {{{
-let colors = {
-      \ "red": { "gui": "#E06C75", "cterm": "204", "cterm16": "1" },
-      \ "dark_red": { "gui": "#BE5046", "cterm": "196", "cterm16": "9" },
-      \ "green": { "gui": "#98C379", "cterm": "114", "cterm16": "2" },
-      \ "yellow": { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" },
-      \ "dark_yellow": { "gui": "#D19A66", "cterm": "173", "cterm16": "11" },
-      \ "blue": { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" },
-      \ "purple": { "gui": "#C678DD", "cterm": "170", "cterm16": "5" },
-      \ "cyan": { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" },
-      \ "white": { "gui": "#ABB2BF", "cterm": "145", "cterm16": "7" },
-      \ "black": { "gui": "#282C34", "cterm": "235", "cterm16": "0" },
-      \ "visual_black": { "gui": "NONE", "cterm": "NONE", "cterm16": "0" },
-      \ "comment_grey": { "gui": "#5C6370", "cterm": "59", "cterm16": "15" },
-      \ "gutter_fg_grey": { "gui": "#4B5263", "cterm": "238", "cterm16": "15" },
-      \ "cursor_grey": { "gui": "#2C323C", "cterm": "236", "cterm16": "8" },
-      \ "visual_grey": { "gui": "#3E4452", "cterm": "237", "cterm16": "15" },
-      \ "menu_grey": { "gui": "#3E4452", "cterm": "237", "cterm16": "8" },
-      \ "special_grey": { "gui": "#3B4048", "cterm": "238", "cterm16": "15" },
-      \ "vertsplit": { "gui": "#181A1F", "cterm": "59", "cterm16": "15" },
-      \}
-
-let red = colors.red
-" }}}
-
-if !(has('termguicolors') && &termguicolors) && !has('gui_running')
-      \ && (!exists('&t_Co') || &t_Co < 256)
-  echoerr '[plastic.vim] There are not enough colors.'
-  finish
-endif
+" Init {{{
+scriptencoding utf-8
 
 set background=dark
-
 hi clear
+
 if exists('syntax_on')
   syntax reset
 endif
 
 let g:colors_name = 'plastic'
 
-let g:terminal_ansi_colors = [
-      \ '#21252b', '#e06c75', '#98c379', '#d79921', '#e5c07b', '#b16286', '#60b6c2', '#7c8696',
-      \ '#2d303d', '#e06c75', '#98c379', '#e5c07b', '#61afef', '#af98e6', '#56b6c2', '#a9b2c3']
-if !has('gui_running') && get(g:, 'candid_transp_bg', 0)
-  hi Normal ctermfg=249 ctermbg=NONE guifg=#a9b2c3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi CursorLineNr ctermfg=180 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi FoldColumn ctermfg=249 ctermbg=NONE guifg=#a9b2c3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi SignColumn ctermfg=249 ctermbg=NONE guifg=#a9b2c3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi VertSplit ctermfg=234 ctermbg=NONE guifg=#1a1d27 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-else
-  hi Normal ctermfg=188 ctermbg=235 guifg=#d7d7d7 guibg=#21252b guisp=NONE cterm=NONE gui=NONE
-  hi CursorLineNr ctermfg=179 ctermbg=236 guifg=#e5c07b guibg=#2d303d guisp=NONE cterm=NONE gui=NONE
-  hi FoldColumn ctermfg=249 ctermbg=234 guifg=#a9b2c3 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
-  hi SignColumn ctermfg=188 ctermbg=235 guifg=#d7d7d7 guibg=#21252b guisp=NONE cterm=NONE gui=NONE
-  hi VertSplit ctermfg=249 ctermbg=235 guifg=#a9b2c3 guibg=#21252b guisp=NONE cterm=NONE gui=NONE
+" Highlighting function (inspiration from https://github.com/chriskempson/base16-vim)
+fun! <sid>hi(group, fg, bg, attr, sp)
+  if !empty(a:fg)
+    exec "hi " . a:group . " guifg=" . a:fg.gui . " ctermfg=" .  a:fg.cterm256
+  endif
+  if !empty(a:bg)
+    exec "hi " . a:group . " guibg=" . a:bg.gui . " ctermbg=" .  a:bg.cterm256
+  endif
+  if a:attr != ""
+    exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
+  endif
+  if !empty(a:sp)
+    exec "hi " . a:group . " guisp=" . a:sp.gui
 endif
-hi ColorColumn ctermfg=NONE ctermbg=235 guifg=NONE guibg=#21252b guisp=NONE cterm=NONE gui=NONE
-hi Conceal ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi! link CursorColumn CursorLine
-hi CursorLine ctermfg=249 ctermbg=234 guifg=#a9b2c3 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
-hi DiffAdd ctermfg=150 ctermbg=235 guifg=#98c379 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffChange ctermfg=73 ctermbg=235 guifg=#56b6c2 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffDelete ctermfg=203 ctermbg=235 guifg=red.gui guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffText ctermfg=179 ctermbg=235 guifg=#e5c07b guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi Directory ctermfg=150 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi EndOfBuffer ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Error ctermfg=203 ctermbg=235 guifg=red.gui guibg=#21252b guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-hi ErrorMsg ctermfg=235 ctermbg=203 guifg=#21252b guibg=red.gui guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi Folded ctermfg=249 ctermbg=234 guifg=#abb2bf guibg=#181a1f guisp=NONE cterm=NONE gui=NONE,italic
-hi IncSearch ctermfg=180 ctermbg=235 guifg=#d19a66 guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi LineNr ctermfg=241 ctermbg=NONE guifg=#5f6672 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi MatchParen ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi ModeMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi MoreMsg ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi Noise ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi NonText ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Pmenu ctermfg=180 ctermbg=234 guifg=#d19a66 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
-hi PmenuSbar ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE gui=NONE
-hi PmenuSel ctermfg=234 ctermbg=241 guifg=#181a1f guibg=#5f6672 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi PmenuThumb ctermfg=NONE ctermbg=236 guifg=NONE guibg=#2d303d guisp=NONE cterm=NONE gui=NONE
-hi Question ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi! link QuickFixLine Search
-hi Search ctermfg=179 ctermbg=235 guifg=#e5c07b guibg=#21252b guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi SpecialKey ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi SpellBad ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=red.gui cterm=NONE,underline gui=NONE,italic,undercurl
-hi SpellCap ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=#61afef cterm=NONE,underline gui=NONE,italic,undercurl
-hi SpellLocal ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=#56b6c2 cterm=NONE,underline gui=NONE,italic,undercurl
-hi SpellRare ctermfg=140 ctermbg=NONE guifg=#af98e6 guibg=NONE guisp=#af98e6 cterm=NONE,underline gui=NONE,italic,undercurl
-hi StatusLine ctermfg=234 ctermbg=180 guifg=#181a1f guibg=#d19a66 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi StatusLineNC ctermfg=234 ctermbg=180 guifg=#181a1f guibg=#d19a66 guisp=NONE cterm=NONE gui=NONE
-hi! link StatusLineTerm StatusLine
-hi! link StatusLineTermNC StatusLineNC
-hi! link TabLine TabLineFill
-hi TabLineFill ctermfg=236 ctermbg=234 guifg=#2d303d guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
-hi TabLineSel ctermfg=150 ctermbg=234 guifg=#98c379 guibg=#181a1f guisp=NONE cterm=NONE gui=NONE
-hi Title ctermfg=150 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi Visual ctermfg=234 ctermbg=180 guifg=#181a1f guibg=#d19a66 guisp=NONE cterm=NONE gui=NONE
-hi! link VisualNOS Visual
-hi WarningMsg ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi WildMenu ctermfg=39 ctermbg=235 guifg=#61afef guibg=#21252b guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi Comment ctermfg=249 ctermbg=NONE guifg=#abb2bf guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
-hi Constant ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Debug ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Delimiter ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Error ctermfg=203 ctermbg=236 guifg=red.gui guibg=#2d303d guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-hi String ctermfg=114 ctermbg=NONE guifg=#98c379 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Ignore ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi PreProc ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Character ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Number ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Boolean ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Float ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Identifier ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Function ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Statement ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Type ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Special ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Todo ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Underlined ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
-hi! link lCursor Cursor
-hi CursorIM ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi ToolbarLine ctermfg=NONE ctermbg=234 guifg=NONE guibg=#1a1d27 guisp=NONE cterm=NONE gui=NONE
-hi ToolbarButton ctermfg=188 ctermbg=234 guifg=#d7d7d7 guibg=#1a1d27 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi xmlRegion ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi xmlTag ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi xmlTagName ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi! link htmlTag xmlTag
-hi! link htmlEndTag htmlTag
-hi! link htmlTagName xmlTagName
-hi htmlArg ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi xmlEndtag ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsNoise ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsParens ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsBrackets ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsImport ctermfg=203 ctermbg=NONE guifg=red.gui guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi! link jsExport jsImport
-hi! link jsFrom jsImport
-hi! link jsExportDefault jsImport
-hi jsStorageClass ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsClassKeyword ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsExtendsKeyword ctermfg=39 ctermbg=NONE guifg=#61afef guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi jsThis ctermfg=179 ctermbg=NONE guifg=#e5c07b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goDirective ctermfg=73 ctermbg=NONE guifg=#56b6c2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goConstants ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goDeclaration ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goDeclType ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi goBuiltins ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi typescriptBraces ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi typescriptImport ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi! link typescriptExport typescriptImport
-hi! link typescriptEndColons typescriptBraces
-hi! link typescriptParens typescriptBraces
-hi! link typescriptSymbols typescriptBraces
-hi! link typescriptClassKeyword jsStorageClass
-hi! link typescriptClassExtends jsStorageClass
-finish
+endfun
+"}}}
+
+" colors definition {{{
+
+let s:red = {'gui': '#e06c75', 'cterm256': '204'}
+let s:green = { 'gui': '#98c379', 'cterm256': '114'}
+let s:yellow = { 'gui': '#e5c07b', 'cterm256': '180'}
+let s:whisky = { 'gui': '#d19a66', 'cterm256': '173' }
+let s:blue = { 'gui': '#61afef', 'cterm256': '39'}
+let s:purple = { 'gui': '#af98e6', 'cterm256': '170'}
+let s:aqua = { 'gui': '#56b6c2', 'cterm256': '38'}
+let s:white = { 'gui': '#d7d7d7', 'cterm256': '145'}
+let s:black = { 'gui': '#181a1f', 'cterm256': '234'}
+let s:visual_black = { 'gui': 'NONE', 'cterm256': 'NONE'}
+let s:background = {'gui': '#21252b', 'cterm256': '235'}
+let s:grey = { 'gui': '#abb2bf', 'cterm256': '59' }
+let s:punctuation = { 'gui': '#7c8696', 'cterm256': '238' }
+let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
+
+" }}}
+
+"" Syntax Definitions (:h w18) {{{
+" <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
+call <sid>hi('Normal', s:white, s:background, 'none', {})
+call <sid>hi('Comment', s:grey, s:none, 'italic', {})
+
+"" UI
+call <sid>hi('Cursor', s:none, s:none, 'reverse', {})
+call <sid>hi('CursorLine', s:white, s:background, 'none', {})
+call <sid>hi('EndOfBuffer', s:whisky, s:none, 'none', {})
+call <sid>hi('Conceal', s:blue, s:none, 'none', {})
+call <sid>hi('CursorColumn', s:none, s:blue, 'none', {})
+call <sid>hi('ColorColumn', s:none, s:background, 'none', {})
+call <sid>hi('FoldColumn', s:punctuation, s:background, 'none', {})
+call <sid>hi('SignColumn', s:none, s:background, 'none', {})
+call <sid>hi('VertSplit', s:grey, s:black, 'none', {})
+call <sid>hi('LineNr', s:yellow, s:background, 'none', {})
+call <sid>hi('CursorLineNr', s:punctuation, s:background, 'none', {})
+
+call <sid>hi('DiffAdd', s:black, s:green, 'none', {})
+call <sid>hi('DiffChange', s:black, s:purple, 'none', {})
+call <sid>hi('DiffDelete', s:black, s:red, 'none', {})
+call <sid>hi('DiffText', s:black, s:aqua, 'none', {})
+
+call <sid>hi('Error', s:red, s:background, 'none', {})
+call <sid>hi('ErrorMsg', s:red, s:background, 'bold', {})
+call <sid>hi('ModeMsg', s:yellow, s:none, 'bold', {})
+call <sid>hi('MoreMsg', s:aqua, s:none, 'bold', {})
+call <sid>hi('WarningMsg', s:whisky, s:none, 'italic', {})
+call <sid>hi('Noise', s:punctuation, s:none, 'none', {})
+call <sid>hi('NonText', s:whisky, s:none, 'none', {})
+call <sid>hi('Folded', s:grey, s:none, 'none', {})
+call <sid>hi('IncSearch', s:yellow, s:black, 'none', {})
+call <sid>hi('Search', s:yellow, s:background, 'reverse', {})
+
+call <sid>hi('Pmenu', s:none, s:black, 'none', {})
+call <sid>hi('PmenuSel', s:black, s:white, 'none', {})
+
+call <sid>hi('Question', s:white, s:background, 'bold', {})
+call <sid>hi('MatchParen', s:blue, s:none, 'bold', {})
+call <sid>hi('Directory', s:white, s:background, 'bold', {})
+call <sid>hi('QuickFixLine', s:black, s:yellow, 'none', {})
+
+call <sid>hi('SpecialKey', s:purple, s:none, 'none', {})
+call <sid>hi('SpellBad', s:red, s:none, 'undercurl', s:red)
+call <sid>hi('SpellCap', s:none, s:none, 'undercurl', {})
+call <sid>hi('SpellLocal', s:none, s:none, 'undercurl', {})
+call <sid>hi('SpellRare', s:none, s:none, 'undercurl', {})
+
+call <sid>hi('StatusLine', s:white, s:black, 'none', {})
+call <sid>hi('StatusLineNC', s:white, s:black, 'none', {})
+hi link StatusLineTerm StatusLine
+hi link StatusLineTermNC StatusLineNC
+
+call <sid>hi('TabLine', s:white, s:black, 'none', {})
+hi link TabLineFill TabLine
+call <sid>hi('TabLineSel', s:whisky, s:black, 'none', {})
+
+call <sid>hi('Title', s:white, s:none, 'none', {})
+call <sid>hi('Visual', s:black, s:white, 'none', {})
+hi link VisualNOS Visual
+call <sid>hi('TabLine', s:white, s:black, 'none', {})
+call <sid>hi('WildMenu', s:black, s:white, 'bold', {})
+"}}}
