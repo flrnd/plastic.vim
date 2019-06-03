@@ -1,3 +1,4 @@
+" vim:fdm=marker
 " Name:         plastic.vim
 " Description:  VSCode Plastic theme vim/neovim port
 " Author:       Florian Prz
