@@ -131,7 +131,7 @@ hi goDeclType ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm
 hi goBuiltins ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi typescriptBraces ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi typescriptImport ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi typescriptExport typescriptImport
+hi! link typescriptExport typescriptImport
 hi! link typescriptEndColons typescriptBraces
 hi! link typescriptParens typescriptBraces
 hi! link typescriptSymbols typescriptBraces
