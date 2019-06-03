@@ -213,3 +213,30 @@ call <sid>hi('goBuiltins', s:whisky, s:none, 'none', {})
 call <sid>hi('goFunctionCall', s:whisky, s:none, 'none', {})
 call <sid>hi('goVarAssign', s:white, s:none, 'none', {})
 "}}}
+
+" Markdown {{{
+call <sid>hi('markdownCode', s:green, s:none, 'none', {})
+hi link markdownCodeBlock markdownCode
+hi link markdownCodeDelimiter markdownCode
+call <sid>hi('markdownHeadingDelimiter', s:whisky, s:none, 'none', {})
+call <sid>hi('markdownRule', s:punctuation, s:none, 'none', {})
+call <sid>hi('markdownHeadingRule', s:punctuation, s:none, 'none', {})
+call <sid>hi('markdownH1', s:whisky, s:none, 'none', {})
+hi link markdownH2 markdownH1
+hi link markdownH3 markdownH1
+hi link markdownH4 markdownH1
+hi link markdownH5 markdownH1
+hi link markdownH6 markdownH1
+call <sid>hi('markdownIdDelimiter', s:purple, s:none, 'none', {})
+call <sid>hi('markdownId', s:purple, s:none, 'none', {})
+call <sid>hi('markdownBlockquote', s:aqua, s:none, 'none', {})
+call <sid>hi('markdowItalic', s:none, s:none, 'italic', {})
+call <sid>hi('markdownBold', s:none, s:none, 'bold', {})
+call <sid>hi('markdownListMarker', s:blue, s:none, 'none', {})
+call <sid>hi('markdownOrderedListMarker', s:blue, s:none, 'none', {})
+call <sid>hi('markdownIdDeclaration', s:blue, s:none, 'none', {})
+call <sid>hi('markdownLinkText', s:blue, s:none, 'none', {})
+call <sid>hi('markdownLinkDelimiter', s:white, s:none, 'none', {})
+call <sid>hi('markdownUrl', s:purple, s:none, 'none', {})
+
+" }}}
