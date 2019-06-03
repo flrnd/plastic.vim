@@ -223,6 +223,7 @@ call <sid>hi('goDeclType', s:whisky, s:none, 'none', {})
 call <sid>hi('goBuiltins', s:whisky, s:none, 'none', {})
 call <sid>hi('goFunctionCall', s:whisky, s:none, 'none', {})
 call <sid>hi('goVarAssign', s:white, s:none, 'none', {})
+hi link goVarDefs goVarAssign
 "}}}
 
 " Markdown {{{
