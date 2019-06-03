@@ -133,7 +133,7 @@ hi link Number Constant
 hi link Boolean Constant
 hi link Float Number
 
-call <sid>hi('Identifier', s:white, s:none, 'none', {})
+call <sid>hi('Identifier', s:punctuation, s:none, 'none', {})
 call <sid>hi('Function', s:whisky, s:none, 'none', {})
 
 call <sid>hi('Statement', s:red, s:none, 'none', {})
@@ -171,3 +171,23 @@ call <sid>hi('htmlArg', s:whisky, s:none, 'none', {})
 call <sid>hi('htmlTitle', s:white, s:none, 'none', {})
 "}}}
 
+"" javascript {{{
+call <sid>hi('jsImport', s:red, s:none, 'none', {})
+hi link jsExport jsImport
+hi link jsFrom jsImport
+hi link jsExportDefault jsExport
+call <sid>hi('jsStorageClass', s:blue, s:none, 'none', {})
+call <sid>hi('jsClassKeyword', s:blue, s:none, 'none', {})
+call <sid>hi('jsExtendsKeyword', s:blue, s:none, 'none', {})
+call <sid>hi('jsThis', s:yellow, s:none, 'none', {})
+"}}}
+
+"" golang {{{
+call <sid>hi('goDirective', s:aqua, s:none, 'none', {})
+call <sid>hi('goConstants', s:white, s:none, 'none', {})
+call <sid>hi('goDeclaration', s:red, s:none, 'none', {})
+call <sid>hi('goDeclType', s:whisky, s:none, 'none', {})
+call <sid>hi('goBuiltins', s:whisky, s:none, 'none', {})
+call <sid>hi('goFunctionCall', s:whisky, s:none, 'none', {})
+call <sid>hi('goVarAssign', s:white, s:none, 'none', {})
+"}}}
