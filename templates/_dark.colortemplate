@@ -159,4 +159,11 @@ goConstants                      fg     none
 goDeclaration                    red    none
 goDeclType                       orange none
 goBuiltins                       orange none
-# }}}
+#}}}
+
+# Typescript {{{
+typescriptBraces                 fg3  none
+typescriptEndColons           -> typescriptBraces
+typescriptParens              -> typescriptBraces
+typescriptSymbols             -> typescriptBraces
+#}}}

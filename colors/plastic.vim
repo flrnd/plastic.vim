@@ -4,7 +4,7 @@
 " Maintainer:   Florian Prz
 " Website:      https://github.com/flrnprz/candid.vim/
 " License:      Vim License (see `:help license`)
-" Last Updated: Fri 31 May 2019 09:14:18 PM CEST
+" Last Updated: Mon 03 Jun 2019 02:56:30 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -129,6 +129,10 @@ hi goConstants ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE
 hi goDeclaration ctermfg=203 ctermbg=NONE guifg=#e06c75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goDeclType ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi goBuiltins ctermfg=180 ctermbg=NONE guifg=#d19a66 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi typescriptBraces ctermfg=102 ctermbg=NONE guifg=#7c8696 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link typescriptEndColons typescriptBraces
+hi! link typescriptParens typescriptBraces
+hi! link typescriptSymbols typescriptBraces
 finish
 
 " Color: neutralred        rgb(224, 108, 117)    ~
@@ -259,3 +263,7 @@ finish
 " goDeclaration                    red    none
 " goDeclType                       orange none
 " goBuiltins                       orange none
+" typescriptBraces                 fg3  none
+" typescriptEndColons           -> typescriptBraces
+" typescriptParens              -> typescriptBraces
+" typescriptSymbols             -> typescriptBraces
