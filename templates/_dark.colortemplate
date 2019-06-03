@@ -166,4 +166,8 @@ typescriptBraces                 fg3  none
 typescriptEndColons           -> typescriptBraces
 typescriptParens              -> typescriptBraces
 typescriptSymbols             -> typescriptBraces
+typescriptImport                 red  none
+typescriptExport              -> typescriptImport
+typescriptClassKeyword           blue none
+typescriptClassExtends        -> typescriptClassKeyword
 #}}}
