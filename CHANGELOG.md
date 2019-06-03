@@ -36,9 +36,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Renamed the project to plastic vim again in honor to VSCode based theme.
 
 ## [0.0.9] - 2019-05-28
-## Added
+### Added
 - Lightlime color theme support
 
 ## [0.0.8] - 2019-05-21
-## Added
+### Added
 - Javascript and golang support
