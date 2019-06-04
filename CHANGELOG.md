@@ -6,20 +6,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.3.1] - 2019-06-3
+## [0.3.2] - 2019-06-04
+### Added
+- NERDTree coloring
+- Less intrusive navigation in NERDTree tab
+### Removed
+- Last modified date from file
+
+## [0.3.1] - 2019-06-03
 ### Added
 - Markdown syntax
 - Improved JSX syntax. [Based on vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty).
 - Better HTML / XML syntax
 
-## [0.3.0] - 2019-06-3
+## [0.3.0] - 2019-06-03
 ### Changed
 - The colorscheme has now a system to modify colors without relying con external plugins.
 - Big refactor with a more clear code.
-
 ### Added
 - Improved CSS support. Before this change, some elements inside the stylesheet were very confusing.
-
 
 ## [0.2.1] - 2019-06-3
 ### Fixed
