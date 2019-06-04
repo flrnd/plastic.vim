@@ -64,7 +64,7 @@ call <sid>hi('Normal', s:white, s:background, 'none', {})
 call <sid>hi('Cursor', s:none, s:none, 'reverse', {})
 hi link lCursor Cursor
 hi link CursorIM Cursor
-call <sid>hi('CursorLine', s:none, s:none, 'underline', {})
+call <sid>hi('CursorLine', s:white, s:none, 'bold', {})
 call <sid>hi('EndOfBuffer', s:whisky, s:none, 'none', {})
 call <sid>hi('Conceal', s:blue, s:none, 'none', {})
 call <sid>hi('CursorColumn', s:none, s:blue, 'none', {})
