@@ -34,7 +34,7 @@ The colorscheme no longers support colortemplate.
 
 - Add A lot of more lang syntax support.
 - ~~lightline theme support.~~
-- Better nerdtree support.
+- ~~Better nerdtree support.~~
 - ~~Improve color accessibility.~~
 - ~~Improve html syntax.~~
 - [ ... ]
