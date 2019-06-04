@@ -64,7 +64,7 @@ call <sid>hi('Normal', s:white, s:background, 'none', {})
 call <sid>hi('Cursor', s:none, s:none, 'reverse', {})
 hi link lCursor Cursor
 hi link CursorIM Cursor
-call <sid>hi('CursorLine', s:white, s:background, 'none', {})
+call <sid>hi('CursorLine', s:none, s:none, 'underline', {})
 call <sid>hi('EndOfBuffer', s:whisky, s:none, 'none', {})
 call <sid>hi('Conceal', s:blue, s:none, 'none', {})
 call <sid>hi('CursorColumn', s:none, s:blue, 'none', {})
@@ -252,3 +252,14 @@ call <sid>hi('markdownLinkDelimiter', s:white, s:none, 'none', {})
 call <sid>hi('markdownUrl', s:purple, s:none, 'none', {})
 
 "}}}
+
+" NERDTree {{{
+call <sid>hi('NERDTreeDir', s:blue, s:none, 'none', {})
+call <sid>hi('NERDTreeDirSlash', s:whisky, s:none, 'none', {})
+call <sid>hi('NERDTreeFile', s:aqua, s:none, 'none', {})
+call <sid>hi('NERDTreeExecFile', s:red, s:none, 'none', {})
+call <sid>hi('NERDTreeOpenable', s:whisky, s:none, 'none', {})
+call <sid>hi('NERDTreeClosable', s:red, s:none, 'none', {})
+call <sid>hi('NERDTreeCWD', s:blue, s:none, 'bold', {})
+call <sid>hi('NERDTreeUp', s:punctuation, s:none, 'none', {})
+" }}}
