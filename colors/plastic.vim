@@ -4,7 +4,6 @@
 " Author:       Florian Prz
 " Repository:   https://github.com/flrnprz/plastic.vim/
 " License:      The MIT License (MIT)
-" Last Updated: Mon 03 Jun 2019
 
 " Init {{{
 scriptencoding utf-8
