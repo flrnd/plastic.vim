@@ -1,4 +1,3 @@
-" vim:fdm=marker
 " Name:         plastic.vim
 " Description:  VSCode Plastic theme vim/neovim port
 " Author:       Florian Prz
@@ -47,6 +46,7 @@ let s:white = { 'gui': '#d7d7d7', 'cterm256': '145'}
 let s:black = { 'gui': '#181a1f', 'cterm256': '234'}
 let s:visual_black = { 'gui': 'NONE', 'cterm256': 'NONE'}
 let s:background = {'gui': '#21252b', 'cterm256': '235'}
+let s:foreground = {'gui': '#a9b2c3', 'cterm256': '235'}
 let s:grey = { 'gui': '#abb2bf', 'cterm256': '59' }
 let s:punctuation = { 'gui': '#7c8696', 'cterm256': '238' }
 let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
@@ -209,9 +209,10 @@ call <sid>hi('jsThis', s:yellow, s:none, 'none', {})
 
 " JSX {{{
 " https://github.com/MaxMEllon/vim-jsx-pretty
-call <sid>hi('jsxTagName', s:white, s:none, 'none', {})
+call <sid>hi('jsxTagName', s:yellow, s:none, 'none', {})
 call <sid>hi('jsxPunct', s:punctuation, s:none, 'none', {})
 call <sid>hi('jsClosePunct', s:punctuation, s:none, 'none', {})
+call <sid>hi('jsxAttrib', s:whisky, s:none, 'none', {})
 hi link jsxCloseString jsClosePunct
 "}}}
 
@@ -263,3 +264,5 @@ call <sid>hi('NERDTreeClosable', s:red, s:none, 'none', {})
 call <sid>hi('NERDTreeCWD', s:blue, s:none, 'bold', {})
 call <sid>hi('NERDTreeUp', s:punctuation, s:none, 'none', {})
 " }}}
+
+" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:
