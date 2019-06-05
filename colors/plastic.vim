@@ -200,6 +200,7 @@ call <sid>hi('jsImport', s:red, s:none, 'none', {})
 hi link jsExport jsImport
 hi link jsFrom jsImport
 hi link jsExportDefault jsExport
+hi link jsArrowFunction jsImport
 call <sid>hi('jsStorageClass', s:blue, s:none, 'none', {})
 call <sid>hi('jsClassKeyword', s:blue, s:none, 'none', {})
 call <sid>hi('jsExtendsKeyword', s:blue, s:none, 'none', {})
