@@ -60,14 +60,14 @@ let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
 call <sid>hi('Normal', s:white, s:background, 'none', {})
 
 " UI {{{
-call <sid>hi('Cursor', s:none, s:none, 'reverse', {})
+call <sid>hi('Cursor', s:none, s:none, 'inverse', {})
 hi link lCursor Cursor
 hi link CursorIM Cursor
 call <sid>hi('CursorLine', s:white, s:none, 'bold', {})
 call <sid>hi('EndOfBuffer', s:whisky, s:none, 'none', {})
 call <sid>hi('Conceal', s:blue, s:none, 'none', {})
 call <sid>hi('CursorColumn', s:none, s:blue, 'none', {})
-call <sid>hi('ColorColumn', s:none, s:background, 'none', {})
+call <sid>hi('ColorColumn', s:none, s:punctuation, 'none', {})
 call <sid>hi('FoldColumn', s:punctuation, s:background, 'none', {})
 call <sid>hi('SignColumn', s:none, s:background, 'none', {})
 call <sid>hi('VertSplit', s:grey, s:black, 'none', {})
