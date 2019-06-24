@@ -28,7 +28,7 @@ honor to the original VS Code theme.
 Added Lightline support.
 
 ~~if you want to customize it only need to install [lifepillar/vim-colortemplate](https://github.com/lifepillar/vim-colortemplate) and edit the template files.~~
-The colorscheme no longers support colortemplate.
+The colorscheme no longer use colortemplate.
 
 #### TODO
 
