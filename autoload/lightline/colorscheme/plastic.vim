@@ -3,13 +3,13 @@
 " Author: Flrn Prz
 " License: MIT License
 " =============================================================================
+let s:foreground = [ '#a9b2c3', 235 ]
 let s:background = [ '#21252b', 235 ]
 let s:yellow = [ '#e5c07b', 180 ]
 let s:purple = [ '#af98e6', 170 ]
 let s:red = [ '#e06c75', 204 ]
 let s:blue = [ '#61afef', 39 ]
 let s:green = [ '#98c379', 114 ]
-let s:foreground = [ '#a9b2c3', 235 ]
 let s:grey = [ '#abb2bf', 59 ]
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
