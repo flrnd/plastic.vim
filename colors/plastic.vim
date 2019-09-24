@@ -1,3 +1,4 @@
+" Vim Color File
 " Name:         plastic.vim
 " Description:  VSCode Plastic theme vim/neovim port
 " Author:       Florian Prz
@@ -70,7 +71,7 @@ call <sid>hi('CursorColumn', s:none, s:blue, 'none', {})
 call <sid>hi('ColorColumn', s:none, s:punctuation, 'none', {})
 call <sid>hi('FoldColumn', s:punctuation, s:background, 'none', {})
 call <sid>hi('SignColumn', s:none, s:background, 'none', {})
-call <sid>hi('VertSplit', s:grey, s:black, 'none', {})
+call <sid>hi('VertSplit', s:grey, s:background, 'none', {})
 call <sid>hi('LineNr', s:punctuation, s:background, 'none', {})
 call <sid>hi('CursorLineNr', s:punctuation, s:background, 'none', {})
 
@@ -103,8 +104,8 @@ call <sid>hi('SpellCap', s:none, s:none, 'undercurl', {})
 call <sid>hi('SpellLocal', s:none, s:none, 'undercurl', {})
 call <sid>hi('SpellRare', s:none, s:none, 'undercurl', {})
 
-call <sid>hi('StatusLine', s:white, s:black, 'none', {})
-call <sid>hi('StatusLineNC', s:white, s:black, 'none', {})
+call <sid>hi('StatusLine', s:white, s:background, 'none', {})
+call <sid>hi('StatusLineNC', s:white, s:background, 'none', {})
 hi link StatusLineTerm StatusLine
 hi link StatusLineTermNC StatusLineNC
 
