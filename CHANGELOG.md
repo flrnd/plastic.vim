@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.4] - 2019-09-24
+
+### Refactor
+
+- Lightline theme now easier to tweak and customize.
+
 ## [0.3.3-3] - 2019-09-24
 
 ### Fixed
