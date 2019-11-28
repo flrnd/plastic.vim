@@ -264,4 +264,5 @@ hi link typescriptModule               typescriptImport
 hi link typescriptTry                  typescriptImport
 hi link typescriptExceptions           typescriptImport
 hi link typescriptCastKeyword          typescriptImport
+hi link typescriptDefault              typescriptImport
 " }}}
