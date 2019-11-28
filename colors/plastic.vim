@@ -137,14 +137,14 @@ hi link Float Number
 call <sid>hi('Identifier', s:white, s:none, 'none', {})
 call <sid>hi('Function', s:whisky, s:none, 'none', {})
 
-call <sid>hi('Statement', s:red, s:none, 'none', {})
+call <sid>hi('Statement', s:whisky, s:none, 'none', {})
 hi link Conditional Statement
 
 call <sid>hi('PreProc', s:aqua, s:none, 'none', {})
 
 call <sid>hi('Type', s:blue, s:none, 'none', {})
 
-call <sid>hi('Special', s:punctuation, s:none, 'none', {})
+call <sid>hi('Special', s:blue, s:none, 'none', {})
 
 call <sid>hi('Underlined', s:blue, s:none, 'underline', {})
 
@@ -251,3 +251,9 @@ call <sid>hi('markdownLinkDelimiter', s:white, s:none, 'none', {})
 call <sid>hi('markdownUrl', s:purple, s:none, 'none', {})
 
 "}}}
+
+" Typescript {{{
+
+
+ 
+" }}}
