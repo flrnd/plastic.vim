@@ -137,14 +137,14 @@ hi link Float Number
 call <sid>hi('Identifier', s:white, s:none, 'none', {})
 call <sid>hi('Function', s:whisky, s:none, 'none', {})
 
-call <sid>hi('Statement', s:red, s:none, 'none', {})
+call <sid>hi('Statement', s:whisky, s:none, 'none', {})
 hi link Conditional Statement
 
 call <sid>hi('PreProc', s:aqua, s:none, 'none', {})
 
 call <sid>hi('Type', s:blue, s:none, 'none', {})
 
-call <sid>hi('Special', s:punctuation, s:none, 'none', {})
+call <sid>hi('Special', s:aqua, s:none, 'none', {})
 
 call <sid>hi('Underlined', s:blue, s:none, 'underline', {})
 
@@ -265,6 +265,21 @@ call <sid>hi('NERDTreeOpenable', s:whisky, s:none, 'none', {})
 call <sid>hi('NERDTreeClosable', s:red, s:none, 'none', {})
 call <sid>hi('NERDTreeCWD', s:blue, s:none, 'bold', {})
 call <sid>hi('NERDTreeUp', s:punctuation, s:none, 'none', {})
+" }}}
+
+" Typescript {{{
+call <sid>hi('typescriptImport', s:red, s:none, 'none', {})
+call <sid>hi('typescriptBraces', s:punctuation, s:none, 'none', {})
+call <sid>hi('typescriptVariable', s:blue, s:none, 'none', {})
+hi link typescriptParens               typescriptBraces
+hi link typescriptEndColons            typescriptBraces
+hi link typescriptAmbientDeclaration   typescriptImport
+hi link typescriptExport               typescriptImport
+hi link typescriptModule               typescriptImport
+hi link typescriptTry                  typescriptImport
+hi link typescriptExceptions           typescriptImport
+hi link typescriptCastKeyword          typescriptImport
+hi link typescriptDefault              typescriptImport
 " }}}
 
 " vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:
