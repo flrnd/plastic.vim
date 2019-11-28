@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.2] - 2019-11-28
+### Changed
+- Base color scheme syntax to match vscode theme.
+
+### Added
+- Some typescript definitions, still a mess but much better :>.
+
 ## [0.3.1] - 2019-06-3
 ### Added
 - Markdown syntax
@@ -19,7 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Improved CSS support. Before this change, some elements inside the stylesheet were very confusing.
-
 
 ## [0.2.1] - 2019-06-3
 ### Fixed
