@@ -254,6 +254,8 @@ call <sid>hi('markdownUrl', s:purple, s:none, 'none', {})
 
 " Typescript {{{
 call <sid>hi('typescriptImport', s:red, s:none, 'none', {})
+call <sid>hi('typescriptBraces', s:punctuation, s:none, 'none', {})
+hi link typescriptEndColons            typescriptBraces
 hi link typescriptAmbientDeclaration   typescriptImport
 hi link typescriptExport               typescriptImport
 hi link typescriptModule               typescriptImport
