@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.5] - 2019-11-28
+
+### Add
+- Typescript, still a mess.
+
 ## [0.3.4] - 2019-09-24
 
 ### Refactor
