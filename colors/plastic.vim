@@ -18,7 +18,7 @@ endif
 
 let g:colors_name = 'plastic'
 
-" Highlighting function (inspiration from https://github.com/chriskempson/base16-vim)
+" highlighting function (inspiration from https://github.com/chriskempson/base16-vim)
 fun! <sid>hi(group, fg, bg, attr, sp)
   if !empty(a:fg)
     exec "hi " . a:group . " guifg=" . a:fg.gui . " ctermfg=" .  a:fg.cterm256
@@ -98,7 +98,7 @@ call <sid>hi('MatchParen', s:blue, s:none, 'bold', {})
 call <sid>hi('Directory', s:white, s:background, 'bold', {})
 call <sid>hi('QuickFixLine', s:black, s:yellow, 'none', {})
 
-call <sid>hi('SpecialKey', s:purple, s:none, 'none', {})
+call <sid>hi('typescriptImportKey', s:purple, s:none, 'none', {})
 call <sid>hi('SpellBad', s:red, s:none, 'undercurl', s:red)
 call <sid>hi('SpellCap', s:none, s:none, 'undercurl', {})
 call <sid>hi('SpellLocal', s:none, s:none, 'undercurl', {})
@@ -144,7 +144,7 @@ call <sid>hi('PreProc', s:aqua, s:none, 'none', {})
 
 call <sid>hi('Type', s:blue, s:none, 'none', {})
 
-call <sid>hi('Special', s:blue, s:none, 'none', {})
+call <sid>hi('typescriptImport', s:blue, s:none, 'none', {})
 
 call <sid>hi('Underlined', s:blue, s:none, 'underline', {})
 
@@ -246,14 +246,19 @@ call <sid>hi('markdownBold', s:none, s:none, 'bold', {})
 call <sid>hi('markdownListMarker', s:blue, s:none, 'none', {})
 call <sid>hi('markdownOrderedListMarker', s:blue, s:none, 'none', {})
 call <sid>hi('markdownIdDeclaration', s:blue, s:none, 'none', {})
-call <sid>hi('markdownLinkText', s:blue, s:none, 'none', {})
-call <sid>hi('markdownLinkDelimiter', s:white, s:none, 'none', {})
+call <sid>hi('markdownlinkText', s:blue, s:none, 'none', {})
+call <sid>hi('markdownlinkDelimiter', s:white, s:none, 'none', {})
 call <sid>hi('markdownUrl', s:purple, s:none, 'none', {})
 
 "}}}
 
 " Typescript {{{
-
-
+call <sid>hi('typescriptImport', s:red, s:none, 'none', {})
+hi link typescriptAmbientDeclaration   typescriptImport
+hi link typescriptExport               typescriptImport
+hi link typescriptModule               typescriptImport
+hi link typescriptTry                  typescriptImport
+hi link typescriptExceptions           typescriptImport
+hi link typescriptCastKeyword          typescriptImport
  
 " }}}
