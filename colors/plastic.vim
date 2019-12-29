@@ -1,8 +1,8 @@
 " Vim Color File
 " Name:         plastic.vim
 " Description:  VSCode Plastic theme vim/neovim port
-" Author:       Florian Prz
-" Repository:   https://github.com/flrnprz/plastic.vim/
+" Author:       Florian Rand
+" Repository:   https://github.com/flrnd/plastic.vim/
 " License:      The MIT License (MIT)
 
 " Init {{{
