@@ -1,6 +1,6 @@
 " =============================================================================
 " Filename: autoload/lightline/colorscheme/plastic.vim
-" Author: Flrn Prz
+" Author: Florian Rand
 " License: MIT License
 " =============================================================================
 let s:foreground = [ '#a9b2c3', 235 ]
