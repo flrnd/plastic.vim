@@ -216,6 +216,7 @@ call <sid>hi('jsClosePunct', s:punctuation, s:none, 'none', {})
 call <sid>hi('jsxAttrib', s:whisky, s:none, 'none', {})
 call <sid>hi('jsxComponentName', s:blue, s:none, 'none', {})
 hi link jsxCloseString jsClosePunct
+hi link jsxBraces jsxPunct
 "}}}
 
 " Golang {{{

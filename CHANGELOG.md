@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.5-1] - 2020-15-1
+
+### Fixed
+
+- Wrong jsxBraces color, now uses puntuacion (mutted gray).
+
 ## [0.3.5] - 2019-11-28
 
 ### Added
