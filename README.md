@@ -11,6 +11,9 @@
 2. clone this directory into your vim/plugged directory
 
 ```vim
+" important:
+set termguicolors
+
 set background=dark
 syntax on
 colorscheme plastic
